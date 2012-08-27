@@ -1,0 +1,42 @@
+<%
+   existing_attributions||=[]
+   existing_creators||=[current_user.person]
+   related_publications||=[]
+   other_creators||=nil
+   show_publications=false if show_publications.nil?
+   taggable = resource_type.constantize.respond_to?("is_taggable?") && resource_type.constantize.is_taggable?
+   sharing_enable=true if sharing_enable.nil?
+   attribution_enable=true if attribution_enable.nil?
+   creators_enable=true if creators_enable.nil?
+%>
+<% if sharing_enable -%>
+    <p>
+      <%= render :partial => "assets/sharing_form" -%>
+    </p>
+<% end -%>
+
+<% if taggable -%>
+    <p>
+      <%= render :partial=>"assets/select_tags" -%>
+    </p>
+<% end -%>
+<% if attribution_enable %>
+    <p>
+      <%= render :partial => "assets/attribution_form", :locals => {:resource_type => resource_type, # this is only for presentation, not for any processing
+                                                                    :existing_attributions => existing_attributions,
+                                                                    :attribution_suggestions => resource_type.constantize.get_all_as_json(current_user) }   -%>
+    </p>
+<% end %>
+<% if creators_enable %>
+    <p>
+      <%= render :partial => "assets/author_form", :locals => {:resource_type => resource_type, # this is only for presentation, not for any processing
+                                                               :existing_creators => existing_creators,
+                                                               :other_creators => other_creators} -%>
+    </p>
+<% end %>
+<% if show_publications -%>
+    <p>
+      <%= render :partial => "assets/publication_relation_form", :locals => {:resource_type => resource_type,
+                                                                             :related_publications => related_publications} -%>
+    </p>
+<% end -%>

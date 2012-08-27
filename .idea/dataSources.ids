@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails work-seek: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="080e0bdd-54f3-491f-be1c-e00fc07426a8">
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://127.0.0.1/seek_test</jdbc-url>
+    <user-name>wel</user-name>
+    <user-password>dfdddfcfdfc6df98df9adf9bdf9b</user-password>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/mysql-connector-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/mysql-connector-java-5.1.18-bin.jar</url>
+      </library>
+    </libraries>
+  </data-source>
+  <data-source source="LOCAL" name="Rails work-seek: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="a9e4ddec-59b8-4ed6-a462-b684b1e6a80d">
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://127.0.0.1/seek_production</jdbc-url>
+    <user-name>wel</user-name>
+    <user-password>dfdddfcfdfc6df98df9adf9bdf9b</user-password>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/mysql-connector-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/mysql-connector-java-5.1.18-bin.jar</url>
+      </library>
+    </libraries>
+  </data-source>
+  <data-source source="LOCAL" name="Rails work-seek: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="ac473eed-a4a6-4cb8-a324-29aa21017884">
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://127.0.0.1/seek_development</jdbc-url>
+    <user-name>wel</user-name>
+    <user-password>dfdddfcfdfc6df98df9adf9bdf9b</user-password>
+    <libraries>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/mysql-connector-license.txt</url>
+      </library>
+      <library>
+        <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/mysql-connector-java-5.1.18-bin.jar</url>
+      </library>
+    </libraries>
+  </data-source>
+</component>

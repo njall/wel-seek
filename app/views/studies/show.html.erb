@@ -1,0 +1,78 @@
+<ul class="sectionIcons">
+    <%= render :partial => "subscriptions/subscribe", :locals => {:object => @study} %>
+    <% if @study.can_manage? -%>
+      <li><%= image_tag_for_key('manage', edit_study_path, nil, nil, "Manage study") -%></li>
+    <% elsif @study.can_edit?-%>
+      <li><%= image_tag_for_key('edit', edit_study_path, "Edit study", nil, 'Edit study') -%></li>
+    <% end -%>
+
+    <% if @study.can_edit? -%>
+        <li>
+          <%= image_tag_for_key('new', new_experiment_path(:study_id=>@study,:create_from_asset=>@study.create_from_asset), "Add an experiment", nil, 'Add an experiment') -%>
+        </li>
+    <% end -%>
+
+  <%= delete_ISA_icon @study,current_user -%>
+    <% if logged_in? and current_user.person.member? %>
+      <li><%= image_tag_for_key('new', new_object_based_on_existing_one_path(:controller_name=>"studies",:id=>@study.id), nil, nil, 'New study based on this one') %></li>
+    <% end %>
+</ul>
+
+<%= render :partial => "layouts/item_title",:locals=>{:item=>@study} %>
+
+<div class="show_basic">
+  <div class="main_content_left_box_narrower">
+  <%= render :partial => "layouts/usage_info", :locals => { :resource => @study } -%>
+  
+  <p class="id">
+    <label>ID: </label>
+    <%= @study.id -%>
+  </p>
+
+  <div class="box_about_actor">
+
+    <div class="investigation">
+      <p>
+        <label>Investigation:</label>
+        <%= link_to h(@study.investigation.title),@study.investigation %>
+      </p>
+    </div>
+
+    <%= render :partial => 'projects/show_project_relationship', :locals => {:resource => @study}%>
+
+    <div>
+      <p>
+        <label>Person responsible:</label>
+        <% if @study.person_responsible.try :can_view? -%>
+          <%= link_to h(@study.person_responsible.name),@study.person_responsible %>
+        <% else -%>
+          <span class="none_text">Not available</span>
+        <% end -%>
+      </p>
+    </div>
+    <p>
+      <b>Experimentalists:</b>
+      <%= text_or_not_specified(@study.experimentalists) %>
+    </p>
+
+    <p>
+      <b>Description:</b>
+      <div id="description" class="box_standout">
+        <%= text_or_not_specified(@study.description, :description=>true,:auto_link=>true) %>
+      </div>
+    </p>
+
+  </div>
+  </div>
+
+  <div class="main_content_right_box_wider">
+    <%= render :partial=>"assets/resource_authors_box",:locals => { :resource => @study, :creators => [@study.contributing_user.try(:person)] } %>
+   </div>
+
+  <div style="clear:both;">
+    <%= embedded_isa_svg(@study.investigation,false,@study) -%>
+  </div>
+
+    <%= render :partial=>"layouts/items_related_to", :object => @study %>
+
+</div>

@@ -1,0 +1,139 @@
+<%
+@experiment_word=@experiment.is_modelling? ? "Analysis" : "Experiment" %>
+<ul class="sectionIcons">
+    <%= render :partial => "subscriptions/subscribe", :locals => {:object => @experiment }%>
+    <% if @experiment.can_manage? -%>
+      <li><%= image_tag_for_key('manage', edit_experiment_path, nil, nil, "Manage #{@experiment_word}") -%></li>
+    <% elsif @experiment.can_edit?-%>
+      <li> <%= image_tag_for_key('edit', edit_experiment_path, "Edit #{@experiment_word} Details", nil, "Edit #{@experiment_word} Details") -%></li>
+    <% end -%>
+    <%= delete_ISA_icon(@experiment,current_user) %>
+    <% if logged_in? and current_user.person.member? %>
+      <li><%= image_tag_for_key('new', new_object_based_on_existing_one_path(:controller_name=>"experiments", :id=>@experiment.id), nil, nil, 'New Experiment based on this one') %></li>
+    <% end %>
+</ul>
+<%= render :partial => "layouts/item_title",:locals=>{:item=>@experiment} %>
+<div class="show_basic">
+   <div class="main_content_left_box_narrower">
+      <%= render :partial => "layouts/usage_info", :locals => { :resource => @experiment } -%>
+      <% if @experiment.study.nil? -%>
+      <div class="warning">
+          <%= image("warning") %><b style="color:red">WARNING</b>
+          <br/>
+          <br/>
+          An Experiment may be edited by anybody, regardless of project membership, until it has been associated with a Study
+      </div>
+      <% end -%>
+      <p class="id">
+          <label>
+              ID: 
+          </label>
+          <%= @experiment.id -%>
+      </p>
+      <p class="id">
+          <label>
+              Class: 
+          </label>
+          <%= @experiment.experiment_class.title -%>
+      </p>
+      <% if @experiment.owner.can_view? %>
+          <p class="id">
+              <label>
+                  Owner:
+              </label>
+              <%= link_to h(@experiment.owner.name),@experiment.owner -%>
+          </p>
+      <% end %>
+      <p>
+          <b>Description:</b>
+          <div id="description" class="box_standout">
+              <%= text_or_not_specified(@experiment.description, :description=>true,:auto_link=>true) %>
+          </div>
+      </p>
+     <%= render :partial => 'projects/show_project_relationship', :locals => {:resource => @experiment}  %>
+      <p id="investigation">
+          <b>Investigation: </b>
+          <%= investigation_link(@experiment.investigation) %>
+      </p>
+      <p id="study">
+          <b>Study: </b>
+          <%= studies_link_list [@experiment.study] %>
+      </p>
+      <p id="experiment_type">
+          <b><%= @experiment_word -%> type: </b>
+          <%= link_to h(@experiment.experiment_type.title.capitalize), @experiment.experiment_type -%>
+      </p>
+      <% unless @experiment.is_modelling? -%>
+      <p id="technology_type">
+          <b>Technology type: </b>
+          <%= link_to h(try_block{@experiment.technology_type.title.capitalize}), @experiment.technology_type -%>
+      </p>
+      <% end -%>
+
+
+      <p id="organism">
+          <b>Organisms: </b>
+          <%= list_organisms_and_strains( @experiment.experiment_organisms.collect{|ao| [ao.organism,ao.strain]} | @experiment.samples.collect{|s| [s.specimen.organism,s.specimen.strain]}) -%>
+      </p>
+
+     <%# FIXME: should be in a css file rather than in the middle of a page -%>
+      <style type="text/css">
+          div.data_model_relationship {
+              border: 1px dotted black;
+              background-color: #EEEEFF;
+              padding: 5px
+          }
+          
+          div.data_model_relationship ul li {
+              list-style: none;
+              list-style-position: inside;
+              margin-left: 5px;
+          }
+          
+          div.data_model_relationship span {
+              color: #1465FF;
+          }
+          
+      </style>
+      <% if ((@experiment.is_modelling?) && !@experiment.models.empty? && !@experiment.data_files.empty?) %><%#MODELLING ASSAY %>
+      <div class="data_model_relationship">
+          <% unless @experiment.models.empty? %>
+          <b><%= @experiment.models.size > 1 ? "Models" : "Model" %>:</b>
+          <br/>
+          <ul>
+              <% @experiment.model_masters.each do |m| %>
+              <li>
+                  <%= link_to truncate(h(m.title), :length=>110), show_resource_path(m) %>
+              </li>
+              <% end %>
+          </ul>
+          <% end %>
+          <% unless @experiment.data_files.empty? %>
+          <b>Data:</b>
+          <br/>
+          <ul>
+              <% @experiment.data_file_masters.each do |d| %>
+              <li>
+                  <%= link_to truncate(h(d.title), :length=>110), show_resource_path(d) %><%= d.relationship_type(@experiment) ? " <span>(" + d.relationship_type(@experiment).title + ")</span>" : "" %>
+              </li>
+              <% end %>
+          </ul>
+          <% end %>
+      </div>
+      <% end %>
+
+	  
+    </div>
+		
+	
+    <div class="main_content_right_box_wider">
+      <%= render :partial => "assets/resource_authors_box", :locals => { :resource => @experiment, :creators => [@experiment.owner]} -%>
+
+      <%= item_tags_and_tag_entry -%>
+
+    </div>
+    <div style="clear:both">
+        <%= embedded_isa_svg(@experiment.study, true, @experiment) -%>
+        <%= render :partial=>"layouts/items_related_to",:object => @experiment %>
+    </div>
+</div>

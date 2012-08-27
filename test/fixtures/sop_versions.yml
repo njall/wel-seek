@@ -1,0 +1,269 @@
+my_first_protocol_v1:
+  title: "My First Favourite Protocol"
+  contributor: owner_of_my_first_protocol (User)
+  description: "This is the very first proper protocol in the test fixtures."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: my_first_protocol
+  version: 1
+  projects: [sysmo_project]
+  policy: private_policy_for_asset_of_my_first_protocol
+
+protocol_with_fully_public_policy_v1:
+  contributor: owner_of_fully_public_policy (User)
+  title: "Protocol with fully public policy"
+  description: "This is a Protocol attached to asset with a fully public policy."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: protocol_with_fully_public_policy
+  version: 1
+  projects: [other_project] # not linked to any project for now
+  policy: fully_public_policy
+
+protocol_with_download_for_all_sysmo_users_policy_v1:
+  contributor: owner_of_download_for_all_sysmo_users_policy (User)
+  title: "Protocol with all registered users policy"
+  description: "This is a Protocol attached to asset with a policy for all registered users."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: protocol_with_download_for_all_sysmo_users_policy
+  version: 1
+  projects: [other_project] # not linked to any project for now
+  policy: download_for_all_sysmo_users_policy
+
+
+protocol_with_all_sysmo_users_policy_v1:
+  contributor: owner_of_editing_for_all_sysmo_users_policy (User)
+  title: "Protocol with all sysmo users policy"
+  description: "This is a Protocol attached to asset with a policy for all SysMO users."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: protocol_with_all_sysmo_users_policy
+  version: 1
+  projects: [other_project] # not linked to any project for now
+  policy: editing_for_all_sysmo_users_policy
+
+protocol_with_custom_permissions_policy_v1:
+  contributor: owner_of_private_policy_using_custom_sharing (User)
+  title: "Protocol with custom permissions only policy"
+  description: "This is a Protocol attached to asset with a policy for custom permissions only."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: protocol_with_custom_permissions_policy
+  version: 1
+  projects: [other_project] #not linked to any project for now
+  policy: private_policy_using_custom_sharing
+
+private_protocol_v1:
+  contributor: owner_of_fully_public_policy (User)
+  title: "Private Protocol"
+  description: "This is a Protocol with a private policy."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: private_protocol
+  version: 1
+  projects: [sysmo_project] # not linked to any project for now
+  policy: private_policy
+
+protocol_with_complex_permissions_v1:
+  contributor: owner_of_my_first_protocol (User)
+  title: "Protocol with complex permissions"
+  description: "This is a Protocol for complex tests of permissions."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: protocol_with_complex_permissions
+  version: 1
+  projects: [other_project] # not linked to any project for now
+  policy: policy_with_complex_permissions
+
+protocol_with_private_policy_and_custom_sharing_v1:
+  contributor: owner_of_my_first_protocol (User)
+  title: "Protocol with private policy and custom sharing"
+  description: "This is a Protocol that has a policy with use_whitelist/use_blacklist set to 'false'; all settings are private and 'use_custom_sharing' as 'true'."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: protocol_with_private_policy_and_custom_sharing
+  version: 1
+  projects: [other_project] # not linked to any project for now
+  policy: private_policy_with_custom_sharing
+
+protocol_with_public_download_and_no_custom_sharing_v1:
+  contributor: owner_of_my_first_protocol (User)
+  title: "Protocol with public download and no custom sharing"
+  description: "This is a Protocol that has a policy with use_whitelist/use_blacklist set to 'false'; public download available, but no custom permissions - 'use_custom_sharing' is 'false'."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  version: 1
+  protocol: protocol_with_public_download_and_no_custom_sharing
+  projects: [other_project] # not linked to any project for now
+  policy: public_download_with_no_custom_sharing
+
+protocol_that_uses_whitelist_blacklist_and_custom_sharing_v1:
+  contributor: owner_of_my_first_protocol (User)
+  title: "Protocol that uses whitelist, blacklist and custom sharing"
+  description: "This is a Protocol that has a policy with use_whitelist/use_blacklist set to 'true' and 'use_custom_sharing' set to 'true' as well."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: protocol_that_uses_whitelist_blacklist_and_custom_sharing
+  version: 1
+  projects: [other_project] # not linked to any project for now
+  policy: whitelist_blacklist_and_custom_sharing
+
+protocol_for_test_with_workgroups_v1:
+  contributor: owner_of_my_first_protocol (User)
+  title: "Protocol that is to be used only for tests with workgroups"
+  description: "This is a Protocol that has a policy with use_whitelist/use_blacklist set to 'false' and 'use_custom_sharing' set to 'true'."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: protocol_for_test_with_workgroups
+  version: 1
+  projects: [other_project] # not linked to any project for now
+  policy: policy_for_worgroup_sharing_tests
+
+protocol_for_test_with_workgroups_no_custom_sharing_v1:
+  contributor: owner_of_my_first_protocol (User)
+  title: "Protocol that is to be used only for tests with workgroups - no custom sharing"
+  description: "This is a Protocol that has a policy with use_whitelist/use_blacklist set to 'false' and 'use_custom_sharing' set to 'false'."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: protocol_for_test_with_workgroups_no_custom_sharing
+  version: 1
+  projects: [other_project] # not linked to any project for now
+  policy: policy_for_worgroup_sharing_tests_no_custom_sharing
+
+protocol_for_test_with_projects_institutions_v1:
+  contributor: owner_of_my_first_protocol (User)
+  title: "Protocol that is to be used only for tests with projects / institutions."
+  description: "This is a Protocol that has a policy with use_whitelist/use_blacklist set to 'false' and 'use_custom_sharing' set to 'true'."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: protocol_for_test_with_projects_institutions
+  version: 1
+  projects: [other_project] # not linked to any project for now
+  policy: policy_for_test_with_projects_institutions
+  
+downloadable_protocol_v1:
+  contributor: owner_of_my_first_protocol (User)
+  title: "Protocol that is downloadable."
+  description: "This is a Protocol that has a policy with use_whitelist/use_blacklist set to 'false' and 'use_custom_sharing' set to 'true'."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: downloadable_protocol
+  version: 1
+  projects: [sysmo_project]
+  policy: sysmo_member_download
+  
+downloadable_protocol_v2:
+  contributor: owner_of_my_first_protocol (User)
+  title: "Protocol that is downloadable."
+  description: "This is a Protocol that has a policy with use_whitelist/use_blacklist set to 'false' and 'use_custom_sharing' set to 'true'."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file2
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: downloadable_protocol
+  version: 2
+  projects: [sysmo_project]
+  policy: sysmo_member_download  
+
+editable_protocol_v1:
+  contributor: owner_of_my_first_protocol (User)
+  title: "Protocol that is editable."
+  description: "This is a Protocol that has a policy with use_whitelist/use_blacklist set to 'false' and 'use_custom_sharing' set to 'true'."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: editable_protocol
+  version: 1
+  projects: [sysmo_project]
+  policy: sysmo_member_edit
+  
+protocol_with_links_in_description_v1:
+  contributor: owner_of_my_first_protocol (User)
+  title: "Protocol that has links."
+  description: Visit my site http://www.sysmo-db.org
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: protocol_with_links_in_description
+  version: 1
+  projects: [sysmo_project]
+  policy: sysmo_member_edit
+
+protocol_with_no_contributor_v1:
+  title: "My First Favourite Protocol"
+  description: "This is the very first proper protocol in the test fixtures."
+  original_filename: "little_file.txt"
+  content_type: "text/plain"
+  content_blob: content_blob_with_little_file
+  created_at: <%= 2.days.ago.to_s :db %>
+  updated_at: <%= 2.days.ago.to_s :db %>
+  last_used_at: <%= 1.days.ago.to_s :db %>
+  protocol: protocol_with_no_contributor
+  version: 1
+  projects: [sysmo_project]
+  policy: sysmo_member_edit

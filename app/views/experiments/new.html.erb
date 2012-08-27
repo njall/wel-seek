@@ -1,0 +1,40 @@
+<% investigations = Investigation.all.select &:can_view?
+   studies=[]
+   investigations.each do |i|
+       studies << i.studies.select(&:can_view?)
+   end
+-%>
+<% if investigations.blank? %>
+    <ul class="sectionIcons">
+        <%= image_tag_for_key('arrow_right', new_investigation_path(:create_from_asset=>@experiment.create_from_asset), "New investigation", {:style=>"font-size:larger"}, "New investigation") -%>
+    </ul>
+<% else %>
+    <% if studies.flatten.blank? %>
+        <ul class="sectionIcons">
+            <%= image_tag_for_key('arrow_right', new_study_path(:create_from_asset=>@experiment.create_from_asset), "New study", {:style=>"font-size:larger"}, "New study") -%>
+        </ul>
+    <% else %>
+        <div class="contribution_title">
+          <h1><%=  @experiment.is_modelling? ? "Modelling analysis creation" : "Experiment creation" -%></h1>
+        </div>
+
+        <% unless @experiment.experiment_class %>
+          <div class="experiment_selection">
+
+            <span>Please select the class of experiment you wish to create</span>
+            <br/><br/><br/>
+            <%= link_to "<p class='select_experiment_class'>#{image("experiment_experimental_avatar",:size=>"32x32")}An experimental experiment</p>",new_experiment_path(:class=>:experimental,:study_id=>params[:study_id],:create_from_asset=>@experiment.create_from_asset) %>
+
+            <%= link_to "<p class='select_experiment_class'>#{image("experiment_modelling_avatar",:size=>"32x32")}A modelling analysis</p>",new_experiment_path(:class=>:modelling,:study_id=>params[:study_id],:create_from_asset=>@experiment.create_from_asset) %>
+
+          </div>
+        <% else %>
+
+          <div class="show_basic">
+            <% form_for @experiment do |f| %>
+              <%= render :partial => "form", :locals => { :f => f, :action=>:new } -%>
+            <% end -%>
+          </div>
+          <% end %>
+    <% end -%>
+<% end %>

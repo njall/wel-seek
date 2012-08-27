@@ -1,0 +1,15 @@
+"-
+    
+            <p style="font-size: 93%; margin-bottom: 0.2em; padding: 0 inherit; text-align: right; vertical-align: middle;">
+          <a href="#" onclick="Effect.toggle(&quot;expertise_tag_suggestions&quot;,'blind',{duration:0.4});; return false;">View suggestions<img alt="Expand" src="/images/folds/unfold.png?1345641902" style="margin-left: 0.3em; vertical-align: middle;" title="header=[] body=[Expand for more details] cssheader=[boxoverTooltipHeader] cssbody=[boxoverTooltipBody] delay=[200]" /></a>
+        </p>
+        <div id="expertise_tag_suggestions" style="font-size: 93%; color: #333333; display: none; text-align: center; margin-top: 0.5em; padding: 0.3em;">
+          <div class="tags_smaller">
+            <div id="expertise_select_tags" class="hTagcloud">
+              <div class="popularity">
+                                                            <a href="javascript:addListTag('expertise',2);" class="popular">Biochemistry</a>                                            <a href="javascript:addListTag('expertise',5);" class="popular">Bioinformatics</a>                                            <a href="javascript:addListTag('expertise',6);" class="popular">Cheminformatics</a>                                            <a href="javascript:addListTag('expertise',9);" class="popular">Data Management</a>                                            <a href="javascript:addListTag('expertise',3);" class="popular">Genetics</a>                                            <a href="javascript:addListTag('expertise',7);" class="popular">Mathematical Modelling</a>                                            <a href="javascript:addListTag('expertise',1);" class="popular">Microbiology</a>                                            <a href="javascript:addListTag('expertise',4);" class="popular">Molecular Biology</a>                                            <a href="javascript:addListTag('expertise',8);" class="popular">Software Engineering</a>                                                  </div>
+            </div>
+          </div>
+        </div>
+    
+

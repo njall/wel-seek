@@ -1,0 +1,19 @@
+<ul class="sectionIcons">
+  <% if admin_logged_in? -%>
+    <li><%= image_tag_for_key('back', help_document_path(@help_document), "Return to document", nil, "Return to document") -%></li>
+    <li><%= image_tag_for_key('destroy', help_document_path(@help_document), nil, { :confirm => 'Are you sure you wish to remove this page?', :method => :delete }, 'Remove') -%></li>
+  <% end -%>
+</ul>
+
+<h1>Editing Page: <%= h @help_document.title %></h1>
+<%= render :partial => "form", :locals => {:action=>:update } -%>
+
+<div style="margin: 2em">
+  <div style="float:left; width: 48%">
+    <%= render :partial => 'layouts/collapsable_div', :locals => {:title => "Attachments (<span id='attachments_count'>#{@help_document.attachments.size}</span>)", :partial => 'attachments'} %>
+  </div>
+  <div style="float:right; width: 51%">
+    <%= render :partial => 'layouts/collapsable_div', :locals => {:title => "Images (<span id='images_count'>#{@help_document.images.size}</span>)", :partial => 'images'} %>
+  </div>
+  <br style="clear:both"/>
+</div>

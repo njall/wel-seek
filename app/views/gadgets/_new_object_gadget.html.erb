@@ -1,0 +1,27 @@
+<% rack = false %>
+<% unless current_user.person.work_groups.empty? || rack==false -%>
+  <% cache "new_object_gadget" do -%>
+
+   <%= new_creatable_javascript -%>
+
+    <div id="new_asset" class="sysmo_gadget">
+      
+      <div class="header">
+        New spreadsheet
+      </div>
+
+      <div class="contents">
+        <div style="text-align: center; padding-left: 0.5em;">
+          <ul class="gadget_list">
+            <form id="new_resource_form" onsubmit="$('new_asset_button').disabled=true;newAsset();return(false)">
+              <%= new_creatable_selection -%>
+              <%= submit_tag "Go", :id=>"new_asset_button" -%>
+            </form>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  <% end -%>
+<% end -%>
+

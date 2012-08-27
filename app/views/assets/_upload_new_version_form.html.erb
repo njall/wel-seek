@@ -1,0 +1,34 @@
+<%
+upload_field = controller_name.downcase.singularize.underscore
+%>
+<script>
+    function validateUploadFormFields(form){
+        if ($('<%= "#{upload_field}_data" -%>').value.length == 0 && $('<%= "#{upload_field}_data_url" -%>').value.length == 0) {
+            alert("Please specify the name of the file to upload or provide a URL	");
+            $('data').focus();
+            return (false);
+        }
+        $('new_version_submit_btn').disabled = true;
+        $('new_version_submit_btn').value = "Uploading ...";
+        $('new_version_submit_btn').form.submit();
+        return (true);
+    }
+</script>
+<% if logged_in? && current_user.person.member? -%>
+<div id="upload_new_version_form" style="display:none">
+    <% form_tag({:action=>"new_version", :id=>resource}, :multipart => true) do -%>
+    <center>
+        <div style="width:95%;margin-top:0.75em;">
+			<%= render :partial=>"assets/upload_box",:locals=>{:new_version=>true} -%>
+            <p>
+                <b>Revision comments (optional)</b>
+                <br/>
+                <%= text_area_tag :revision_comment, nil, :size=>"55x4" -%>
+                <br/>
+                <%= submit_tag "Upload", :id => "new_version_submit_btn", :onclick => "javascript: validateUploadFormFields(this.form); return(false);" -%>
+            </p>
+        </div>
+    </center>
+    <% end -%>
+</div>
+<%end%>

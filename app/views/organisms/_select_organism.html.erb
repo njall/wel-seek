@@ -1,0 +1,10 @@
+<div class="fold">
+    <div class="foldTitle">Details about the organism</div>    
+    <div class="foldContent">
+        <label>
+            Organism:
+        </label>
+        <br/>
+        <%= select model_class.name.underscore.to_sym,:organism_id,Organism.find(:all,:order=>:title).collect{|o| [o.title.capitalize,o.id]},:include_blank=>"Not specified" -%>
+    </div>
+</div>

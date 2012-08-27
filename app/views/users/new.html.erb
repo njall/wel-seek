@@ -1,0 +1,77 @@
+<center>
+  <div id="signup" style="width: 700px; margin-top: 0.5em;">
+
+    <ul class="sectionIcons" style="text-align: right;">
+      <li><%= image_tag_for_key("refresh", login_url, "Return to login page", nil, "Return to login page") -%></li>
+    </ul>
+
+    <h1>Signup for <%= Seek::Config.application_name %></h1>
+
+    <p class="box_infotext">
+      <b>By registering, you are indicating that you have read and agree that:</b>
+      You are responsible for any content that you upload. We receive and store certain types of information whenever you
+      interact with us which we will use only for operational purposes. We will not make
+      personally identifiable data available to third parties without consent.
+      Please contact us if you have any queries about our terms or our privacy policy.
+      <br/><br/>
+      If you have previously provided a login and password but didn't select or create a profile, then your details have already been stored
+      and you should <b><%= link_to "login", login_url %></b> to continue the registration process.
+    </p>
+
+    <% if User.count == 0 -%>
+      <br/>
+      <p class="box_infotext system_message">
+        There are currently no Users defined in the system. You should now register an initial user.
+        This initial user will become the Administrator of the system.
+      </p>
+    <% end -%>
+
+    <% if error_messages_for :user -%>
+      <p><%= error_messages_for :user %></p>
+    <% end -%>
+
+    <h2>Please provide your details <%= help_icon("Please note that fields marked with an asterisk are compulsory.") %></h2>
+
+    <% form_tag users_path do -%>
+      <div id="login_details">
+        <p>          
+            <b><font style="color: #FF0000;">*</font> Login name</b>
+            <%= help_icon("Login should contain a minimum of 3 characters") -%>
+          <br/>
+          <%= text_field_tag :login, nil %>
+        </p>
+
+        <p>
+          <b><font style="color: #FF0000;">*</font> Password</b>
+            <%= help_icon("Password should contain a minimum of 4 characters") -%>
+          <br/>
+          <%= password_field_tag :password, nil %>
+        </p>
+
+        <p>
+          <b><font style="color: #FF0000;">*</font> Confirm Password</b><br/>
+          <%= password_field_tag :password_confirmation, nil %>
+        </p>
+      </div>
+
+      <p style="text-align: center;">
+        <%= submit_tag 'Register',:disable_with=>"Registering..." %>
+      </p>
+      
+      <h2>Alternatively, register with an <a href="http://openid.net/" target="_blank">OpenID</a> <%= help_icon("If you aren't sure what an OpenID is or whether or not you have one, you can safely ignore this an register using a username and password using the form above.") %></h2>     
+      
+      <div style="width: 90%; border: 1px dashed #CCC; padding: 5px;">
+        <p>
+          <label for="user_login">
+            <%= image_tag "openid-16x16.gif" %><b> OpenID</b>
+          </label><br/>
+          <%= text_field_tag :openid_identifier, nil, :style => "width: 95%" %>
+        </p>
+      </div>
+
+      <p style="text-align: center;">
+        <%= submit_tag 'Register',:disable_with=>"Registering..." %>
+      </p>
+    <% end -%>
+  </div>
+</center>

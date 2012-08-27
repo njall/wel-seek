@@ -1,0 +1,8 @@
+yeast:
+  experiment: metabolomics_experiment
+  organism: yeast
+  culture_growth_type: chemostat
+
+Saccharomyces_cerevisiae:
+  experiment: metabolomics_experiment
+  organism: Saccharomyces_cerevisiae

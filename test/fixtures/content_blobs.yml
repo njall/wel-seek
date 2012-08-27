@@ -1,0 +1,73 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# for info on 'load_blob_data' see: http://techpolesen.blogspot.com/2007/04/rails-fixture-tips.html
+# or http://www.realityforge.org/articles/2006/04/06/loading-binary-data-into-rails-fixtures
+<%
+  def make_file(uuid,name)
+     fixture_file = "#{RAILS_ROOT}/test/fixtures/files/#{name}"
+     dir = "#{Dir::tmpdir}/seek_content_blobs"
+     FileUtils.mkdir(dir) unless File.exists?(dir)
+     destination = "#{dir}/#{uuid}.dat"
+     FileUtils.cp(fixture_file,destination)
+  end
+  
+  def init_blob(name)
+      uuid = UUIDTools::UUID.random_create.to_s
+      make_file(uuid,name)
+      return uuid
+  end
+%>
+
+one:
+  id: 1
+  uuid: <%= init_blob('file_picture.png') %>
+  
+  
+# ******** Fixtures below this point used with new Rails association mechanism - hence, no IDs defined ********
+
+content_blob_with_little_file:  
+  uuid: <%=  init_blob('little_file.txt') %>
+  
+content_blob_with_little_file2:  
+  uuid: <%= init_blob('little_file_v2.txt') %>  
+
+teusink_blob:  
+  uuid: <%= init_blob('Teusink.xml') %>
+
+jws_model_blob:  
+  uuid: <%= init_blob('Teusink2010921171725.dat') %>
+  
+francos_model_blob:  
+  uuid: <%= init_blob('BIOMD0000000064.xml') %>  
+
+picture_blob:  
+  uuid: <%= init_blob('file_picture.png') %>
+  
+spreadsheet_blob:  
+  uuid: <%= init_blob('small-test-spreadsheet.xls') %>
+
+private_spreadsheet_blob:
+  uuid: <%= init_blob('small-test-spreadsheet.xls') %>
+  
+url_content_blob:
+  url: http://mockedlocation.com/a-piccy.png
+  uuid: <%= UUIDTools::UUID.random_create.to_s %>
+  
+url_no_host_content_blob:
+  url: http://sdkfhsdfkhskfj.com/pic.png 
+  uuid: <%= UUIDTools::UUID.random_create.to_s %>
+  
+url_not_found_content_blob:
+  url: http://mocked404.com
+  uuid: <%= UUIDTools::UUID.random_create.to_s %>  
+  
+non_sbml_xml_blob:  
+  uuid: <%= init_blob('non_sbml_xml.xml') %>
+  
+invalid_sbml_xml_blob:  
+  uuid: <%= init_blob('invalid_sbml_xml.xml') %>    
+  
+non_jws_dat_blob:  
+  uuid: <%= init_blob('non_jws_dat.dat') %>
+
+unique_spreadsheet_blob:
+  uuid: <%= init_blob('small-test-spreadsheet.xls') %>

@@ -1,0 +1,30 @@
+<% if logged_in_and_registered? -%>
+
+    <%= render :partial => "gadgets/new_object_gadget" -%>
+    <%= render :partial=>"gadgets/announcements_gadget" %>
+    <%= render :partial => "gadgets/favourites" -%>
+    <div id="sidebar_tag_cloud">
+      <% cache "sidebar_tag_cloud" do -%>
+          <%= render :partial=>"gadgets/tag_cloud_gadget" %>
+      <% end -%>
+    </div>
+
+    <%#= render :partial=>"gadgets/organism_gadget" %>
+
+<% else -%>
+
+    <%= render :partial => "gadgets/sign_in" -%>
+
+    <div id="sidebar_tag_cloud">
+      <% cache "sidebar_tag_cloud" do -%>
+          <%= render :partial=>"gadgets/tag_cloud_gadget" %>
+      <% end -%>
+    </div>
+
+    <%#= render :partial=>"gadgets/organism_gadget" %>
+
+<% end -%>
+
+
+
+

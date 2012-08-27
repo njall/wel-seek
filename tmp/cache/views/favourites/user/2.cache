@@ -1,0 +1,17 @@
+"  <div id="drop_favourites" class="contents" style="min-height:100px; text-align: left">    
+    <div id="favourite_list">
+      
+
+  <span class="none_text" style="vertical-align:middle;height:100%;">
+    Drag an icon here to remember for future reference.<br/>
+  </span>
+
+
+<script type="text/javascript">
+//<![CDATA[
+Droppables.add("content", {accept:'favourite', onDrop:function(element){Element.show('fav_ajax-loader'); new Ajax.Request('/favourites/delete', {asynchronous:true, evalScripts:true, method:'delete', onComplete:function(request){Element.hide('fav_ajax-loader');}, parameters:'id=' + encodeURIComponent(element.id) + '&authenticity_token=' + encodeURIComponent('bSgISqbDHU4wpKOvmZxTJCRFJ0Duxsj3bI/IhEGBufA=')})}})
+//]]>
+</script>
+    </div>    
+  </div>
+  

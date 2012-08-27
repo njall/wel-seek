@@ -1,0 +1,31 @@
+<%= javascript_include_tag "sharing.js", "experiments.js","attribution.js","resource.js" -%>
+<h1>New Protocol</h1>
+<div class="show_basic">
+    <% form_tag({:action => :create}, :multipart => true) do -%>
+    <div class="asset_form">
+        <%= error_messages_for :protocol -%>
+        <%= render :partial=>"assets/upload_box" -%>
+        <p style="margin-top: 1.5em;">
+            <b>Title</b>
+            <span class="required">*</span>
+            <br/>
+            <% protocol_title_value = (params[:protocol].blank? || params[:protocol][:title].blank?) ? nil : params[:protocol][:title] -%>
+            <%= text_area_tag 'protocol[title]', protocol_title_value, :style => "width: 100%;", :rows=>2 -%>
+        </p>
+        <p style="margin-top: 0.5em;">
+            <b>Description</b>
+            <br/>
+            <% protocol_description_value = (params[:protocol].blank? || params[:protocol][:description].blank?) ? nil : params[:protocol][:description] -%>
+            <%= text_area_tag 'protocol[description]', protocol_description_value, :style => "width: 100%;", :rows => 10 -%>
+        </p>
+        <%= render :partial => "projects/project_selector", :locals => { :resource => @protocol } -%>
+        
+		<%= render :partial=>"assets/asset_form_bottom", :locals=> {:resource_type => "Protocol",:show_publications=>false} -%>
+		<%= render :partial => "experiments/associate_experiments", :locals=>{:resource => @protocol, :show_relationships => false} -%>
+        <p>
+          <%= preview_permission_popup_link(@protocol)-%>
+          <%= submit_tag "Upload and Save", :id => "protocol_submit_btn", :onclick => "validateResourceFields(true,'protocol',true); return(false);" -%> or <%= link_to 'Cancel', protocols_path -%>
+        </p>
+		</div>
+     <% end -%>    
+</div>

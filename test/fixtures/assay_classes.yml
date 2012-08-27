@@ -1,0 +1,7 @@
+experimental_experiment_class:
+  title: Experimental Experiment
+  key: EXP
+  
+modelling_experiment_class:
+  title: Modelling Experiment
+  key: MODEL

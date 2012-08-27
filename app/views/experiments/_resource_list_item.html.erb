@@ -1,0 +1,40 @@
+<%
+   @experiment_text=resource.is_modelling? ? "Analysis" : "Experiment"
+%>
+
+<%= list_item_title resource %>
+
+<div class="list_item_left_column">
+  <%= list_item_attribute "ID", resource.id %>
+
+  <%= list_item_attribute "#{@experiment_text} type", resource.experiment_type.try(:title).try(:capitalize), resource.experiment_type %>
+  <% unless resource.is_modelling? -%>
+      <%= list_item_attribute "Technology type", try_block{resource.technology_type.title.capitalize}, resource.technology_type %>
+  <% end -%>
+
+  <%= list_item_optional_attribute "Investigation", resource.investigation.try(:title), resource.investigation if resource.investigation.can_view?%>
+
+  <%= list_item_optional_attribute "Study", resource.study.try(:title), resource.study if resource.study.can_view?%>
+
+  <%= list_item_authorized_list(resource.models, "Models", true, 50, true) if resource.is_modelling? %>
+
+</div>
+
+<div class="list_item_right_column">
+  <%= list_item_authorized_attribute "Owner", resource.owner %>
+
+  <%= render :partial => 'projects/show_project_relationship', :locals => {:resource => resource, :list_item => true}%>
+
+  <%= list_experiment_samples_and_organisms "Samples",resource.samples,resource.experiment_organisms %>
+
+  <%= list_item_authorized_list resource.protocol_masters, "Protocols", true, 50, true %>
+
+  <%= list_item_authorized_list resource.data_file_masters, "Data files", true, 50, true %>
+
+</div>
+
+<div class="list_item_whole_width">
+  <%= list_item_tag_list resource %>
+  <%= list_item_description resource.description %>
+  <%= list_item_timestamp resource %>
+</div>

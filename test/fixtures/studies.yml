@@ -1,0 +1,45 @@
+metabolomics_study:
+  title: A Metabolomics Study  
+  investigation: metabolomics_investigation
+  person_responsible: person_without_group
+  policy: editing_for_all_sysmo_users_policy
+
+metabolomics_study2:
+  title: A Metabolomics Study2
+  investigation: metabolomics_investigation2
+  person_responsible: person_without_group
+  policy: editing_for_all_sysmo_users_policy
+
+study_with_overlapping_experiment_protocols:
+  title: A study
+  investigation: metabolomics_investigation
+  policy: editing_for_all_sysmo_users_policy
+
+study_with_no_experiments:
+  title: A study with no experiments
+  investigation: investigation_with_no_experiments
+  policy: editing_for_all_sysmo_users_policy
+
+study_with_links_in_description:
+  title: Study with links in description
+  investigation: investigation_with_links_in_description
+  description: Visit my site http://www.sysmo-db.org
+  policy: editing_for_all_sysmo_users_policy
+
+study_with_experiment_with_public_private_protocols_and_datafile:
+  title: Study with one experiment and public private protocols
+  investigation: investigation_with_links_in_description
+  description: Visit my site http://www.sysmo-db.org
+  policy: editing_for_all_sysmo_users_policy
+
+junk_study:
+  title: ansdgfdgjdfojhdfh
+  investigation: junk_investigation
+  description: Visit my site http://www.sysmo-db.org
+  policy: editing_for_all_sysmo_users_policy
+
+study_with_modelling_experiment:
+  title: study with modelling experiment
+  investigation: metabolomics_investigation2
+  description: Blah blah blah
+  policy: editing_for_all_sysmo_users_policy

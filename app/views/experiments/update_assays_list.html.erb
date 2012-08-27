@@ -1,0 +1,19 @@
+<script type="text/javascript">
+  /* Popup window for creating new experiment will be closed after submitting, and return to its parent window --the new asset(data_file,protocol,model,..) window.
+  At the same time, the experiments list for selection is updated and the new created experiment is selected for adding to the asset.
+  Current user can go on creating new asset with new created experiment and the old data in the form as well.
+  */
+    var text,value,experiment_list_id;
+    text = "<%= @experiment.title %>";
+    value = "<%= @experiment.id %>";
+    if (!window.opener) {
+        alert("New experiment was created but its parent window was closed.");
+        window.close();
+    }
+    experiment_list_id = window.opener.document.getElementById("possible_experiments");
+    experiment_list_id.appendChild(new Option(text, value));
+    experiment_list_id.selectedIndex = experiment_list_id.options.length - 1;
+    experiment_list_id.onchange();
+    alert("New experiment was created! You can add it now.");
+    window.close();
+</script>

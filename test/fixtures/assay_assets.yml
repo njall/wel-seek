@@ -1,0 +1,84 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+metabolomics_experiment_asset1:
+  asset: my_first_protocol (Protocol)
+  experiment: metabolomics_experiment
+  version: 1
+
+metabolomics_experiment_asset2:
+  asset: protocol_with_fully_public_policy (Protocol)
+  experiment: metabolomics_experiment
+  version: 1
+
+metabolomics_experiment_data_file_asset:
+  asset: picture (DataFile)
+  experiment: metabolomics_experiment
+  version: 1
+
+metabolomics_experiment2_assets1:
+  asset: my_first_protocol (Protocol)
+  experiment: metabolomics_experiment2
+  version: 1
+
+metabolomics_experiment2_assets2:
+  asset: protocol_for_test_with_workgroups (Protocol)
+  experiment: metabolomics_experiment2
+  version: 1
+
+metabolomics_experiment3_asset1:
+  asset: my_first_protocol (Protocol)
+  experiment: metabolomics_experiment3
+  version: 1
+
+metabolomics_experiment3_asset2:
+  asset: protocol_with_fully_public_policy (Protocol)
+  experiment: metabolomics_experiment3
+  version: 1
+
+experiment_with_no_study_but_has_some_protocols_asset:
+  asset: my_first_protocol (Protocol)
+  experiment: experiment_with_no_study_but_has_some_protocols
+  version: 1
+
+experiment_with_no_study_but_has_some_files_asset:
+  asset: picture (DataFile)
+  experiment: experiment_with_no_study_but_has_some_files
+  version: 1
+
+#these are assets that are either public or private from the viewpoint of the user :model_owner
+experiment_with_public_and_private_protocols_and_datafiles_public_protocol:
+  asset: protocol_with_fully_public_policy (Protocol)
+  experiment: experiment_with_public_and_private_protocols_and_datafiles
+  version: 1
+
+experiment_with_public_and_private_protocols_and_datafiles_private_protocol:
+  asset: protocol_with_private_policy_and_custom_sharing (Protocol)
+  experiment: experiment_with_public_and_private_protocols_and_datafiles
+  version: 1
+  
+experiment_with_public_and_private_protocols_and_datafiles_public_df:
+  asset: downloadable_data_file (DataFile)
+  experiment: experiment_with_public_and_private_protocols_and_datafiles
+  version: 1
+
+experiment_with_public_and_private_protocols_and_datafiles_private_df:
+  asset: private_data_file (DataFile)
+  experiment: experiment_with_public_and_private_protocols_and_datafiles
+  version: 1
+  
+validation_data_for_modelling_experiment:
+  asset: picture (DataFile)
+  experiment: modelling_experiment_with_data_and_relationship
+  version: 1
+  relationship_type: validation_data
+  
+experiment_with_a_model:
+  asset: teusink (Model)
+  experiment: experiment_with_a_model
+  version: 1
+    
+experiment_can_edit_by_my_first_protocol_owner1_asset:
+  asset: my_first_protocol (Protocol)
+  experiment: experiment_can_edit_by_my_first_protocol_owner1
+  version: 1
+

@@ -1,0 +1,25 @@
+"¯    <div>
+      <table>
+        <tr>
+          <td class="left">            
+            <p><a href="/">Front Page</a></p>
+            <p><a href="http://wel.cs.manchester.ac.uk" target="_blank">About WEL-DB</a></p> 
+            <p><a href="wel.cs.manchester.ac.uk">Web Ergonomics Lab</a> </p>
+          </td>
+          <td class="middle">
+          </td>
+          <td class="right">
+            <p>Powered by:</p>
+            <a href="http://www.rubyonrails.com" class="middle" target="_blank"><img alt="Ror-logo-32" src="/images/ror-logo-32.png?1345641903" /></a>
+            <p style="margin-top: 0.2em;">
+              Icons:
+              <br/>
+              <a href="http://www.famfamfam.com/lab/icons/silk/" target="_blank">Silk icons 1.3</a>
+              <br/>
+              <a href="http://www.everaldo.com/crystal/" target="_blank">Crystal Clear icons</a>
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  

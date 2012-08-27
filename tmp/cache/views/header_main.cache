@@ -1,0 +1,15 @@
+"p  <table width="100%">
+    <tr>
+      <td style="text-align:left">
+        <a href="/"><img alt="SEEK" src="/images/seek-logo-smaller.png?1345641904" title="SEEK" /></a>
+      </td>
+      <td style="width:90%;">
+        <p id='header_text_main'  class="box_standout">
+  <a href="wel.cs.manchester.ac.uk" onclick="window.open(this.href);return false;">WEL Data Repository</a>
+</p>
+      </td>
+      <td style="text-align:right;">
+        <a href="http://www.sysmo-db.org"><img alt="http://www.sysmo-db.org" src="/images/sysmo-db-logo_smaller.png?1345641904" title="Web Ergonomics Lab" /></a>
+      </td>
+    </tr>
+  </table>

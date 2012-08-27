@@ -1,0 +1,33 @@
+<%
+   @experiment_text=resource.is_modelling? ? "Analysis" : "Experiment"
+%>
+
+<%= list_item_title resource %>
+
+
+  <%= list_item_attribute "ID", resource.id %>
+
+  <%= list_item_attribute "#{@experiment_text} type", resource.experiment_type.title.capitalize, resource.experiment_type %>
+  <% unless resource.is_modelling? -%>
+      <%= list_item_attribute "Technology type", resource.technology_type.title.capitalize, resource.technology_type %>
+  <% end -%>
+
+  <%= list_item_optional_attribute "Investigation", resource.investigation.try(:title), resource.investigation %>
+
+  <%= list_item_optional_attribute "Study", resource.study.try(:title), resource.study %>
+
+  <%= list_item_authorized_list(resource.models, "Models", true, 50, true) if resource.is_modelling? %>
+
+
+
+
+  <%= list_item_attribute "Owner", resource.owner.name, resource.owner %>
+
+  <%= render :partial => 'projects/show_project_relationship', :locals => {:resource => resource, :list_item => true} %>
+
+  <%= list_item_simple_list(resource.experiment_organisms, "Organism") { |ao| experiment_organism_list_item(ao) } %>
+
+  <%= list_item_authorized_list resource.protocols, "Protocols", true, 50, true %>
+
+  <%= list_item_authorized_list resource.data_files, "Data files", true, 50, true %>
+

@@ -1,0 +1,83 @@
+<%= javascript_include_tag "resource" -%>
+<% truncate_length_for_boxes = 22 -%>
+
+<ul class="sectionIcons">
+<%= asset_buttons @data_file,@display_data_file.version -%>
+</ul>
+
+<%= render :partial=>"assets/upload_new_version_form", :locals=>{:resource=>@data_file} -%>
+
+<%= render :partial => "layouts/item_title",:locals=>{:item=>@data_file} %>
+
+<%= render :partial => "layouts/usage_info", :locals => { :resource => @data_file } -%>
+
+
+<div class="show_basic">
+  <div class="main_content_left_box_narrower">
+    <%= render :partial=>"assets/resource_version_details", :locals=>{:displayed_resource=>@display_data_file, :resource=>@data_file} -%>
+    <div class="box_about_actor">
+      <%= render :partial => 'projects/show_project_relationship', :locals => {:resource => @data_file}  %>
+      <p>
+        <label>File name:</label>
+        <%=h @display_data_file.original_filename -%>
+      </p>
+
+      <p>
+        <label>Format:</label>
+        <%=h mime_nice_name(@display_data_file.content_type) -%>
+      </p>
+      <br/>
+
+      <p>
+        <b>Description:</b>
+        <% unless @display_data_file.description.blank? -%>
+          <div class="box_standout" id="description">
+            <%= simple_format(auto_link(white_list(@display_data_file.description),:all,:rel=>'nofollow')) -%>
+          </div>
+        <% else -%>
+          <p class="none_text">
+            No description.
+          </p>
+        <% end -%>
+      </p>
+
+    </div>
+  </div>
+  <%= render :partial=>"assets/resource_main_content_right",:locals => { :resource => @data_file } %>
+  
+  <div style="clear:both;">
+    <p>
+        <%= embedded_isa_svg(@data_file, true, @data_file) -%>
+      </p>
+    <p>
+
+      <% if Seek::Config.systems_biology_mode %>
+        <%= puts "<h2>Factors studied:</h2>" %>
+        <%= render :partial=>"data_files/studied_factors" %>
+        <%=  puts "</p>" %>
+     <% end %>
+
+    <div class="fold">
+
+      <div class="foldTitle">
+        Treatments
+      </div>
+
+      <div class="foldContent" style="display:none;" >
+        <% if @data_file.can_download? -%>
+            <% treatments = @display_data_file.treatments -%>
+            <% if treatments.values.keys.empty? -%>
+                <span class="none_text">No treatments were found in the data file, or it does not match a known template.</span>
+            <% else -%>
+                    <%= render :partial=>"treatment_table", :locals=>{:treatments=>treatments} -%>
+            <% end -%>
+        <% else -%>
+            <span id="treatments" class="none_text">You do not have permission to view the treatments for this file.</span>
+        <% end -%>
+      </div>
+    </div>
+  </div>
+
+  <%= render :partial=>"layouts/items_related_to",:object => @data_file %>
+
+</div>

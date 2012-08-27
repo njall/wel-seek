@@ -1,0 +1,44 @@
+<%# This partial expects 3 parameters to be defined: -%>
+<%# - resource - instance of resource for which the authors are displayed -%>
+<%# - creators - collection of creators to which the resource is attributed -%>
+<%# - truncate_to - length of the texts after which truncation is activated -%>
+<%# - title - the title of the box (defaults to Creators if missing) -%>
+<%
+
+title||="Creators"
+creators ||= resource.creators unless resource.respond_to?(:contributor)
+creators ||= [resource.contributor.nil? ? nil : resource.contributor.person] | resource.creators
+
+%>
+<div class="contribution_section_box">  
+  <p class="heading">
+    <%= help_icon("These are the people that uploaded the item, along with other people involved in creating it. Sometimes the uploader may have uploaded the item on behalf of its creators.") -%>
+    <%= h(title) -%>
+  </p>
+ 
+  <p class="author_list">
+  <% creators.each do |creator| %>
+    <% if creators.count < 6 and (creator.nil? or creator.can_view?)%>
+            <span class="author_avatar"><%= creator.nil? ? the_jerm : favouritable_icon(creator, 50) -%></span>
+    <% elsif creator.nil?%>
+            The JERM
+    <% elsif creator.can_view?%>
+            <%= link_to(h(creator.name), url_for(creator))%>
+    <% elsif creator.title_is_public?%>
+            <%= creator.name %>
+    <% end %>
+  <% end %>
+  </p>
+
+  <% if resource.respond_to?(:other_creators) && !resource.other_creators.blank? -%>
+
+  <p class="heading">
+    <%= help_icon("Non-SEEK members who helped with the creation of this file.") -%>
+    Other Creators        
+  </p>
+  <div style="border: 1px dashed #BBB; margin: 0.5em;padding: 3px;text-align:left">
+    <%= resource.other_creators%>
+  </div>
+  <% end -%>
+
+</div>

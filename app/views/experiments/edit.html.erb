@@ -1,0 +1,9 @@
+<div class="contribution_title">
+  <h1><%=  @experiment.is_modelling? ? "Modelling analysis editing" : "Experiment editing" -%></h1>
+</div>
+
+<div class="show_basic">
+  <% form_for @experiment do |f| %>
+    <%= render :partial => "form", :locals => { :f => f, :action=>:edit } -%>
+  <% end -%>
+</div>

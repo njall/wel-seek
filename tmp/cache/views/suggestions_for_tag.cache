@@ -1,0 +1,15 @@
+"p
+    
+            <p style="font-size: 93%; margin-bottom: 0.2em; padding: 0 inherit; text-align: right; vertical-align: middle;">
+          <a href="#" onclick="Effect.toggle(&quot;tag_tag_suggestions&quot;,'blind',{duration:0.4});; return false;">View suggestions<img alt="Expand" src="/images/folds/unfold.png?1345641902" style="margin-left: 0.3em; vertical-align: middle;" title="header=[] body=[Expand for more details] cssheader=[boxoverTooltipHeader] cssbody=[boxoverTooltipBody] delay=[200]" /></a>
+        </p>
+        <div id="tag_tag_suggestions" style="font-size: 93%; color: #333333; display: none; text-align: center; margin-top: 0.5em; padding: 0.3em;">
+          <div class="tags_smaller">
+            <div id="tag_select_tags" class="hTagcloud">
+              <div class="popularity">
+                                                            <a href="javascript:addListTag('tag',57);" class="vvvv-popular">Accessibility</a>                                            <a href="javascript:addListTag('tag',60);" class="vv-popular">Client</a>                                            <a href="javascript:addListTag('tag',59);" class="vv-popular">Interaction</a>                                            <a href="javascript:addListTag('tag',61);" class="vv-popular">Mobile</a>                                            <a href="javascript:addListTag('tag',62);" class="vv-popular">Online</a>                                            <a href="javascript:addListTag('tag',58);" class="vvvv-popular">Technology</a>                                                  </div>
+            </div>
+          </div>
+        </div>
+    
+

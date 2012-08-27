@@ -1,0 +1,40 @@
+<%= javascript_include_tag "sharing.js",  "resource.js" %>
+<%= f.error_messages -%>
+
+<%= f.hidden_field :create_from_asset %>
+<%= f.hidden_field :new_link_from_study -%>
+
+<div style="width: 98%;">
+  <p>
+    <%= f.label :title-%><span class="required">*</span><br/>
+    <%= f.text_area :title,:style => "width: 100%;", :rows=>2 -%>
+  </p>
+
+  <p>
+    <%= f.label :description -%><br/>
+    <%= f.text_area :description,:style => "width: 100%;", :rows => 10 -%>
+  </p>
+
+    <%= render :partial => 'projects/project_selector', :locals => {:resource => @investigation} -%><br/>
+
+  <p>
+    <%= render :partial=>"assets/sharing_form" if @investigation.can_manage? -%>
+  </p>
+</div>
+
+
+
+<p style="margin-top: 2em; text-align: center;" >
+  <%
+     button_text=action==:edit ? "Update" : "Create"
+     disabled_text=action==:edit ? "Updating..." : "Creating..."
+  %>
+  <% if @investigation.can_manage? %>
+      <%= preview_permission_popup_link(@investigation)-%>
+      <%= f.submit button_text, :id => "investigation_submit_btn", :onclick => "javascript: clickLink($('preview_permission'));return(false);" -%>
+  <% else %>
+      <%= f.submit button_text, :disable_with=>disabled_text, :id => "investigation_submit_btn", :onclick => "javascript: $('investigation_submit_btn').form.submit();return(false);" -%>
+  <% end %>
+  or <%= link_to 'Cancel', (@investigation.id ? investigation_path(@investigation.id) : investigations_path) -%>
+</p>
+

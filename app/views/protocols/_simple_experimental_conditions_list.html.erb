@@ -1,0 +1,22 @@
+<% if @protocol.can_view? -%>
+
+  <% if @protocol.can_edit? -%>
+    <ul class="sectionIcons">
+      <li><%= image_tag_for_key('edit', protocol_experimental_conditions_path(@protocol), nil, nil, 'Edit experimental conditions (latest version)') -%></li>
+    </ul>
+  <% end -%>
+
+  <br/>
+
+  <% unless @display_protocol.experimental_conditions.empty? -%>
+    <ul>
+       <%= render :partial=>"studied_factors/condition_or_factor_row_headings", :locals=>{:asset => 'protocol', :show_delete=>false} %>
+       <%= render :partial=>"studied_factors/condition_or_factor_row",:collection=>@protocol.experimental_conditions, :locals=>{:asset => 'protocol', :show_delete=>false} %>
+    </ul>
+  <% else -%>
+    <span class="none_text">There are no experimental conditions for this Protocol.</span>
+  <% end -%>
+
+  <div style="clear:both;">&nbsp;</div>
+
+<% end -%>

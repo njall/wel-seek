@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+# one:
+#   column: value
+#
+# two:
+#   column: value
+
+experiment_and_publication:
+    subject: experiment_with_a_publication (Experiment)
+    object: taverna_paper_pubmed (Publication)    
+    predicate: Relationship::RELATED_TO_PUBLICATION
+
+model_and_publication:
+    subject: teusink (Model)
+    object: pubmed_2 (Publication)
+    predicate: Relationship::RELATED_TO_PUBLICATION
+
+datafile_and_publication:
+    subject: picture (DataFile)
+    object: pubmed_2 (Publication)
+    predicate: Relationship::RELATED_TO_PUBLICATION
+
+
+

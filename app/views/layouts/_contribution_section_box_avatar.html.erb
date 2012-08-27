@@ -1,0 +1,16 @@
+<%# this partial expects 2 local to be declared -- -%>
+<%# 1) "object" for which the avatar is displayed (object.name() method should be available for any supplied object); -%>
+<%# 2) "drag_id" - id for dragging-dropping avatar into "favourites" gadget; -%>
+
+
+<div class="contribution_section_box">
+  <div>
+    <%= favouritable_icon(object, 120) -%>
+  </div>
+  
+  <% if object.instance_of?(Person) -%>
+      <div style="padding-top: 0.5em">
+        <%= seek_role_icons(@person) -%>
+      </div>
+  <% end -%>
+</div>

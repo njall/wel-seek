@@ -1,0 +1,36 @@
+<% if admin_logged_in? -%>
+  <ul class="sectionIcons">
+    <li><%= image_tag_for_key('edit', edit_organism_path(@organism), "Edit Organism", nil, 'Edit Organism') -%></li>
+	<li><%= image_tag_for_key('new', new_organism_path, "Add Organism", nil, 'Add Organism') -%></li>
+	<li><%= delete_organism_icon(@organism)%></li>
+  </ul>
+<% end %>
+
+<%= render :partial => "layouts/item_title",:locals=>{:item=>@organism} %>
+
+<div class="show_basic">
+
+  <% if @organism.concept -%>
+    <h2>Details about this organism</h2>
+    <%= render :partial=>"bioportal_concept_details",:locals=>{:concept=>@organism.concept} -%>
+    <br/>
+    <%= link_to "Visualise ontology term",visualise_organism_path(@organism),:popup=>true %> | <%= link_to_ncbi_taxonomy_browser @organism,"NCBI taxonomy browser",:popup=>true %>
+  <% end -%>
+
+  <h2>Strain details</h2>
+  <table style="width:100%;">
+  <thead>
+    <th>Seek ID</th>
+    <th>Name</th>
+    <th>Provider name</th>
+    <th>Provider's strain ID</th>
+    <th>Genotypes</th>
+    <th>Phenotypes</th>
+    <th>Synonym</th>
+    <th>Comments</th>
+    <th>Based on</th>
+  </thead>
+  <%= render :partial=>"strain_information_row", :collection=>@organism.strains.without_default.select(&:can_view?) -%>
+  </table>
+<%= render :partial=>"layouts/items_related_to",:object => @organism %>
+</div>

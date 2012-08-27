@@ -1,0 +1,96 @@
+<%= javascript_include_tag 'calendar_date_select/calendar_date_select' %>
+<%= stylesheet_link_tag 'calendar_date_select/default' %>
+<%= javascript_include_tag "sharing.js" -%>
+<%= javascript_include_tag "resource.js"%>
+<%= javascript_include_tag "biosample.js"%>
+
+<%= f.error_messages %>
+
+<% if @sample.new_record? && @sample.specimen.try(:new_record?)%>
+    <%= render :partial => "samples/specimen_form", :locals => {:f => f, :specimen => @sample.specimen, :action => action}%>
+<% else %>
+    <p>
+      <%= f.label "Choose a specimen" %> <span class="required">*</span><br/>
+      <%= f.collection_select(:specimen_id, Specimen.all_authorized_for('view'), :id, :title,{:include_blank =>"Please Select..."},{:style=>"width:50%"}) %>
+    </p>
+<% end %>
+
+<h2>Sample Details</h2>
+
+<div style="width: 95%;">
+
+  <p>
+    <%= f.label "Sample name:" -%><span class="required">*</span><br/>
+    <%= f.text_field :title, :style => "width: 350px;" -%>
+  </p>
+
+  <% if Seek::Config.is_virtualliver %>
+      <p>
+        <%= f.label "Explantation time" -%><br/>
+        <%= f.text_field :explantation, :style => "width: 350px;" -%>
+      </p>
+
+      <p>
+        <%= f.label :donation_date -%><span class="required">*</span><br/>
+        <%= f.calendar_date_select :donation_date, :time => "mixed" -%>
+      </p>
+  <% end %>
+
+  <p>
+    <%= f.label :lab_internal_identifier -%><span class="required">*</span><br/>
+    <%= f.text_field :lab_internal_number, :style => "width: 350px;" -%>
+  </p>
+
+  <p>
+    <%= f.label :sampling_date -%><br/>
+    <%= f.calendar_date_select :sampling_date, :time => "mixed", :style=>"width:350px;" -%>
+  </p>
+
+  <p>
+    <%= f.label :provider_name -%><br/>
+    <%= f.text_field :provider_name, :style=>"width:350px;" -%>
+  </p>
+
+  <p>
+    <%= f.label "Provider's sample identifier" -%><br/>
+    <%= f.text_field :provider_id, :style=>"width:350px;" -%>
+  </p>
+
+  <p>
+    <%= f.label "Comment" -%><br/>
+    <%= f.text_field :comments, :style=>"width:350px;" -%>
+  </p>
+
+  <p>
+    <%= f.label "Organism part" -%><br/>
+    <%= f.select :organism_part, options_for_select(['whole cell', 'membrane fraction'].insert(0,'Not specified'), @sample.organism_part), :style => 'float:right;margin-right:30em' %>
+  </p>
+  <br/>
+  <%= render :partial => 'projects/project_selector', :locals => {:resource => @sample,:allow_nil=>true}%>
+
+  <br style="clear:both"/>
+
+  <% if @sample.can_manage?%>
+      <p>
+          <%= render :partial => "assets/sharing_form" -%>
+      </p>
+  <% end %>
+</div>
+
+<%= f.hidden_field :from_new_link %>
+<%= f.hidden_field :from_biosamples %>
+
+<p style="margin-top: 2em; text-align: center;">
+  <%
+     button_text=action==:edit ? "Update" : "Create"
+     disabled_text=action==:edit ? "Updating..." : "Creating..."
+  %>
+  <% if @sample.can_manage? %>
+      <%= preview_permission_popup_link(@sample)-%>
+      <%= f.submit button_text, :id => "sample_submit_btn", :onclick => "javascript: clickLink($('preview_permission'));return(false);" -%>
+
+  <% else %>
+      <%= f.submit button_text, :id => "sample_submit_btn", :disable_with=>disabled_text-%>
+  <% end %>
+  or <%= link_to 'Cancel', (@sample.id ? sample_path(@sample.id) : samples_path) -%>
+</p>

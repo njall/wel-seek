@@ -1,0 +1,75 @@
+<%= javascript_include_tag "resource" -%>
+
+<ul class="sectionIcons">
+    <%= asset_buttons @protocol,@display_protocol.version -%>
+</ul>
+
+<%= render :partial=>"assets/upload_new_version_form", :locals=>{:resource=>@protocol} -%>
+
+<%= render :partial => "layouts/item_title",:locals=>{:item=>@protocol} %>
+
+<%= render :partial => "layouts/usage_info", :locals => { :resource => @protocol } -%>
+
+
+<div class="show_basic">
+  
+
+  <div class="main_content_left_box_narrower">
+
+    <%= render :partial=>"assets/resource_version_details", :locals=>{:displayed_resource=>@display_protocol, :resource=>@protocol} -%>
+  
+    <div class="box_about_actor">
+      <p>
+        <b>Title:</b>
+        <span class="title"><%= h @display_protocol.title -%></span>
+      </p>
+
+
+      <p>
+        <b>File name:</b>
+        <%= h @display_protocol.original_filename -%>
+      </p>
+
+      <p>
+        <b>Format:</b>
+        <%= h mime_nice_name(@display_protocol.content_type) -%>
+      </p>
+
+      <br/>
+
+      <p>
+        <b>Description:</b>
+        <% unless @display_protocol.description.blank? -%>
+          <div class="box_standout" id="description">
+            <%= simple_format(auto_link(white_list(@display_protocol.description),:all,:rel=>'nofollow')) -%>
+          </div>
+      <% else -%>
+          <p class="none_text">
+            No description
+          </p>
+      <% end -%>
+      </p>
+
+    </div>
+  </div>
+
+  <%= render :partial=>"assets/resource_main_content_right",:locals => { :resource => @protocol } %>
+
+  <div style="clear:both;padding-top:1em;">
+    <p>
+        <%= embedded_isa_svg(@protocol, true, @protocol) -%>
+    </p>
+<% if Seek::Config.systems_biology_mode %>
+    <h2>
+      Experimental Conditions
+    </h2>
+    <%= render :partial=> "protocols/simple_experimental_conditions_list" %>
+<% end %>
+    <br/>
+
+    <%# get, classify and authorize all assets for this project -%>
+    <%= render :partial=>"layouts/items_related_to",:object => @protocol %>
+
+  </div>
+
+</div>

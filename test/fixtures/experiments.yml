@@ -1,0 +1,221 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+metabolomics_experiment:
+  title: Metabolomics Experiment
+  experiment_type: metabolomics
+  technology_type: gas_chromatography    
+  study: metabolomics_study  
+  owner: person_for_model_owner
+  experiment_class: experimental_experiment_class
+  policy: policy_for_viewable_data_file
+  samples: [test_sample]
+
+
+metabolomics_experiment2:
+  title: Metabolomics Experiment2
+  experiment_type: metabolomics
+  technology_type: gas_chromatography  
+  study: study_with_overlapping_experiment_protocols
+  owner: person_for_model_owner
+  experiment_class: experimental_experiment_class
+  uuid: pppp-kkkk-eeee-wwww
+  policy: policy_for_viewable_data_file
+  samples: [test_sample]
+
+metabolomics_experiment3:
+  title: Metabolomics Experiment3
+  experiment_type: metabolomics
+  technology_type: gas_chromatography
+  study: study_with_overlapping_experiment_protocols
+  owner: person_for_model_owner
+  experiment_class: experimental_experiment_class
+  policy: policy_for_viewable_data_file
+  samples: [test_sample]
+
+experiment_with_just_a_study:
+  title: Experiment with just a Study
+  experiment_type: metabolomics
+  technology_type: gas_chromatography
+  study: metabolomics_study2
+  owner: person_for_model_owner
+  experiment_class: experimental_experiment_class
+  policy: policy_for_viewable_data_file
+  samples: [test_sample]
+
+experiment_with_no_study_or_files:
+  title: Experiment with no Study or files
+  experiment_type: metabolomics
+  technology_type: gas_chromatography
+  owner: person_for_model_owner
+  experiment_class: experimental_experiment_class
+  study: junk_study
+  policy: policy_for_viewable_data_file
+  samples: [test_sample]
+
+experiment_with_no_study_but_has_some_files:
+  title: Experiment with no Study but has some files
+  experiment_type: metabolomics
+  technology_type: gas_chromatography
+  owner: person_for_model_owner
+  experiment_class: experimental_experiment_class
+  study: junk_study
+  policy: policy_for_viewable_data_file
+  samples: [test_sample]
+
+experiment_with_no_study_but_has_some_protocols:
+  title: Experiment with no Study but has some protocols
+  experiment_type: metabolomics
+  technology_type: gas_chromatography  
+  owner: person_for_model_owner
+  experiment_class: experimental_experiment_class
+  study: junk_study
+  policy: policy_for_viewable_data_file
+  samples: [test_sample]
+
+experiment_type_test_experiment1:
+  title: experiment_type_test_experiment1
+  experiment_type: experiment_type_with_child_and_experiment
+  technology_type: gas_chromatography
+  owner: person_for_model_owner
+  experiment_class: experimental_experiment_class
+  study: junk_study
+  policy: policy_for_viewable_data_file
+  samples: [test_sample]
+
+experiment_type_test_experiment2:
+  title: experiment_type_test_experiment2
+  experiment_type: child_experiment_type_with_experiment
+  technology_type: gas_chromatography
+  owner: person_for_model_owner
+  experiment_class: experimental_experiment_class
+  study: junk_study
+  policy: policy_for_viewable_data_file
+  samples: [test_sample]
+
+experiment_type_test_experiment3:
+  title: experiment_type_test_experiment3
+  experiment_type: child_experiment_type_with_experiment
+  technology_type: gas_chromatography
+  owner: person_for_model_owner
+  experiment_class: experimental_experiment_class
+  study: junk_study
+  policy: private_policy
+  samples: [test_sample]
+
+technology_type_test_experiment1:
+  title: technology_type_test_experiment1
+  technology_type: technology_type_with_child_and_experiment
+  experiment_type: metabolomics
+  owner: person_for_model_owner
+  experiment_class: experimental_experiment_class
+  study: junk_study
+  policy: policy_for_viewable_data_file
+  samples: [test_sample]
+
+technology_type_test_experiment2:
+  title: technology_type_test_experiment2
+  technology_type: child_technology_type_with_experiment
+  experiment_type: metabolomics
+  owner: person_for_model_owner
+  experiment_class: experimental_experiment_class
+  study: junk_study
+  policy: policy_for_viewable_data_file
+  samples: [test_sample]
+
+technology_type_test_experiment3:
+    title: technology_type_test_experiment3
+    technology_type: child_technology_type_with_experiment
+    experiment_type: metabolomics
+    owner: person_for_model_owner
+    experiment_class: experimental_experiment_class
+    study: junk_study
+    policy: private_policy
+    samples: [test_sample]
+
+experiment_with_links_in_description:
+  title: Experiment with links in description
+  experiment_type: metabolomics
+  technology_type: gas_chromatography  
+  owner: person_for_model_owner
+  description: Visit my site http://www.sysmo-db.org
+  study: study_with_links_in_description
+  experiment_class: experimental_experiment_class
+  policy: policy_for_viewable_data_file
+  samples: [test_sample]
+
+experiment_with_public_and_private_protocols_and_datafiles:
+  title: Experiment with 2 protocols, and 2 datafiles - one of each public & private
+  experiment_type: metabolomics
+  technology_type: gas_chromatography
+  owner: person_for_owner_of_my_first_protocol
+  description: Visit my site http://www.sysmo-db.org
+  study: study_with_experiment_with_public_private_protocols_and_datafile
+  experiment_class: experimental_experiment_class
+  policy: policy_for_viewable_data_file
+  samples: [test_sample]
+
+modelling_experiment_with_data_and_relationship:
+  title: Modelling Experiment with Data
+  experiment_type: metabolomics
+  owner: person_for_owner_of_my_first_protocol
+  description: modelling experiment
+  study: study_with_modelling_experiment
+  experiment_class: modelling_experiment_class
+  policy: policy_for_viewable_data_file
+
+experiment_with_a_model:
+  title: Experiment with model
+  experiment_type: metabolomics
+  technology_type: gas_chromatography
+  study: metabolomics_study2
+  owner: person_for_model_owner
+  experiment_class: experimental_experiment_class
+  policy: policy_for_viewable_data_file
+  samples: [test_sample]
+
+experiment_with_a_publication:
+  title: Experiment with publication
+  experiment_type: metabolomics
+  technology_type: gas_chromatography
+  study: metabolomics_study2
+  owner: person_for_model_owner
+  experiment_class: experimental_experiment_class
+  policy: policy_for_viewable_data_file
+  samples: [test_sample]
+
+modelling_experiment:
+  title: Modelling Experiment
+  experiment_type: metabolomics
+  owner: person_for_model_owner
+  description: modelling experiment
+  study: study_with_modelling_experiment
+  experiment_class: modelling_experiment_class
+  policy: policy_for_viewable_data_file
+
+experiment_can_edit_by_datafile_owner:
+  title: Modelling Experiment
+  experiment_type: metabolomics
+  owner: person_for_datafile_owner
+  description: modelling experiment
+  study: study_with_modelling_experiment
+  experiment_class: modelling_experiment_class
+  policy: policy_for_viewable_data_file
+
+experiment_can_edit_by_my_first_protocol_owner1:
+  title: Modelling Experiment
+  experiment_type: metabolomics
+  owner: person_for_owner_of_my_first_protocol
+  description: modelling experiment
+  study: study_with_modelling_experiment
+  experiment_class: modelling_experiment_class
+  policy: policy_for_viewable_data_file
+
+experiment_can_edit_by_my_first_protocol_owner2:
+  title: Modelling Experiment
+  experiment_type: metabolomics
+  owner: person_for_owner_of_my_first_protocol
+  description: modelling experiment
+  study: study_with_modelling_experiment
+  experiment_class: modelling_experiment_class
+  policy: policy_for_viewable_data_file
+

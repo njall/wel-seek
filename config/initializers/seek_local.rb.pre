@@ -1,0 +1,6 @@
+
+#This holds a secret phrase, used for encrypting private information in the database
+#GLOBAL_PASSPHRASE=""
+
+
+#PORTER_SECRET = ""

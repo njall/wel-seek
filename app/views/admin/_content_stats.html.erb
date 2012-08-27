@@ -1,0 +1,64 @@
+<%
+  #So we don't have to run lengthy authorization a second time when calculating total stats
+  total_visible_data_files = []
+  total_visible_models = []
+  total_visible_protocols = []
+  total_accessible_data_files = []
+  total_accessible_models = []
+  total_accessible_protocols = []
+%>
+
+<h3>Content statistics</h3>
+For data, models and Protocols, the numbers are split as <em>total</em> / <em>visible</em> / <em>accessible</em>
+<table>
+  <tr>
+    <th>Project</th>
+    <th>People (Registered)</th>
+    <th>Investigations</th>
+    <th>Studies</th>
+    <th>Experiments</th>
+    <th>Data Files</th>
+    <th>Models</th>
+    <th>Protocols</th>
+    <th>Publications</th>
+  </tr>
+  <% stats.each do |stat| %>
+  <tr>
+    <td><%= link_to stat.project.name, stat.project -%></td>
+    <% registered_people = stat.registered_people.count %>
+    <td><%= stat.people.count -%> (<%= registered_people -%>)</td>
+    <td><%= stat.investigations.count -%></td>
+    <td><%= stat.studies.count -%></td>
+    <td><%= stat.experiments.count -%></td>
+    <% visible_data_files = stat.visible_data_files
+       total_visible_data_files |= visible_data_files %>
+	<% accessible_data_files = stat.accessible_data_files
+       total_accessible_data_files |= accessible_data_files %>
+    <td><%= "#{stat.data_files.count}/#{visible_data_files.count}/#{accessible_data_files.count}" -%></td>
+    <% visible_models = stat.visible_models
+       total_visible_models |= visible_models %>
+	<% accessible_models = stat.accessible_models
+       total_accessible_models |= accessible_models %>
+    <td><%= "#{stat.models.count}/#{visible_models.count}/#{accessible_models.count}" -%></td>
+    <% visible_protocols = stat.visible_protocols
+       total_visible_protocols |= visible_protocols %>
+	<% accessible_protocols = stat.accessible_protocols
+       total_accessible_protocols |= accessible_protocols %>
+    <td><%= "#{stat.protocols.count}/#{visible_protocols.count}/#{accessible_protocols.count}" -%></td>
+    <td><%= stat.publications.count -%> </td>
+  </tr>
+  <% end %>
+  <tr style="background-color: #DEF">
+    <td><b>Overall</b></td>
+    <td><%= Person.count -%> (<%= User.count(:all,:conditions=>"person_id IS NOT NULL") -%>)<em>*</em></td>
+    <td><%= Investigation.count -%></td>
+    <td><%= Study.count -%></td>
+    <td><%= Experiment.count -%></td>
+    <td><%= "#{DataFile.count}/#{total_visible_data_files.count}/#{total_accessible_data_files.count}" -%></td>
+    <td><%= "#{Model.count}/#{total_visible_models.count}/#{total_accessible_models.count}" -%></td>
+    <td><%= "#{Protocol.count}/#{total_visible_protocols.count}/#{total_accessible_protocols.count}" -%></td>
+    <td><%= Publication.count -%></td>
+  </tr>
+</table>
+<hr/>
+<em>* Note that this is the overall number of people, and registered users. This may not necessarily by the sum of the values above due to people being in multiple projects.</em>

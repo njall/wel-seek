@@ -1,0 +1,59 @@
+<div>
+  <ul class="tabnav">
+
+        <!-- People tab -->
+        <%= tab_definition :controllers=>["people"] -%>
+
+    <!-- Institutions tab -->
+    <%= tab_definition :controllers=>["institutions"] -%>
+
+    <!-- Projects tab -->
+    <%= tab_definition :controllers=>["projects"]-%>
+
+        <!-- Investigations tab -->
+        <%= tab_definition :controllers=>["investigations"], :gap_before=>true if Seek::Config.investigations_enabled-%>
+
+        <!-- Studies tab -->
+        <%= tab_definition :controllers=>["studies"] if Seek::Config.studies_enabled-%>
+
+        <!-- Experiments tab -->
+        <%= tab_definition :controllers=>["experiments"] if Seek::Config.experiments_enabled-%>
+
+
+         <!-- Samples tab -->
+        <% tab_definition :controllers=>["samples"] if Seek::Config.samples_enabled-%>
+
+        <!-- Specimens tab -->
+        <% tab_definition :controllers=>["specimens"] if Seek::Config.specimens_enabled -%>
+
+        <!-- Biosamples -->
+        <%= tab_definition :controllers=>["biosamples"], :gap_before=>true if Seek::Config.biosamples_enabled -%>
+
+        <!-- Data tab -->
+        <%= tab_definition :controllers=>["data_files"], :title=>"Data", :gap_before=>true  if Seek::Config.data_files_enabled -%>
+
+        <!-- Models tab -->
+        <%= tab_definition :controllers=>["models"]  if Seek::Config.models_enabled -%>
+
+        <!-- Protocols tab -->
+        <%= tab_definition :controllers=>["protocols"], :title=>"Protocols"  if Seek::Config.protocols_enabled  -%>
+
+        <!-- Publications tab -->
+        <%= tab_definition :controllers=>["publications"]  if Seek::Config.publications_enabled -%>
+
+        <!-- Presentations tab -->
+        <%= tab_definition :controllers=>["presentations"]  if Seek::Config.presentations_enabled -%>
+
+        <!-- Forums tab -->
+        <!-- Be hidden for unlogin user -->
+        <% if logged_in? %>
+            <%# tab_definition :controllers=>["forums", "topics"], :gap_before=>true -%>
+        <% end %>
+
+        <!-- Events tab -->
+        <%= tab_definition :controllers=>["events"], :gap_before=>true if Seek::Config.events_enabled -%>
+
+        <!-- Help tab -->
+        <%= tab_definition :controllers=>["help_documents"], :title=>"Help", :gap_before=>true if Seek::Config.help_enabled -%>
+      </ul>
+    </div>

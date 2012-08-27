@@ -1,0 +1,53 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+metabolomics:
+  title: Metabalomics
+
+proteomics:
+  title: Proteomics
+
+parent1:
+  title: Parent1
+  children: child1,child2,child3
+
+parent2:
+  title: Parent2
+  children: child3
+
+  
+child1:
+  title: Child1
+
+child2:
+  title: Child2
+
+child3:
+  title: Child3
+  
+  
+experiment_type_with_child_and_experiment:
+  title: experiment_type_with_child_and_experiment
+  children: child_experiment_type_with_experiment
+  
+experiment_type_with_child:
+  title: experiment_type_with_child
+  children: child_experiment_type
+  
+experiment_type_with_only_child_experiments:
+  title: experiment_type_with_only_child_experiments
+  children: child_experiment_type_with_experiment
+
+child_experiment_type_with_experiment:
+  title: child_experiment_type_with_experiment
+  
+child_experiment_type:
+  title: child_experiment_type
+
+new_parent:
+  title: new_parent
+
+experimental_experiment_type:
+  title: "experimental experiment type"
+
+modelling_experiment_type:
+  title: "modelling analysis type"

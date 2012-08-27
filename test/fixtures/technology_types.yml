@@ -1,0 +1,48 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+gas_chromatography:
+  title: gas chromatography
+  
+electrophoresis:
+  title: Electrophoresis
+
+chromatography:
+  title: Chromatography
+
+parent1:
+  title: Parent1
+  children: child1,child2,child3
+
+parent2:
+  title: Parent2
+  children: child3
+  
+child1:
+  title: Child1
+
+child2:
+  title: Child2
+
+child3:
+  title: Child3
+  
+technology_type_with_child_and_experiment:
+  title: technology_type_with_child_and_experiment
+  children: child_technology_type_with_experiment
+  
+technology_type_with_child:
+  title: technology_type_with_child
+  children: child_technology_type
+  
+technology_type_with_only_child_experiments:
+  title: technology_type_with_only_child_experiments
+  children: child_technology_type_with_experiment
+
+child_technology_type_with_experiment:
+  title: child_technology_type_with_experiment
+  
+child_technology_type:
+  title: child_technology_type
+
+new_parent:
+  title: new_parent

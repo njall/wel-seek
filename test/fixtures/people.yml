@@ -1,0 +1,214 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+quentin_person:
+  id: 1
+  first_name: "quentin"
+  last_name: "jones"
+  email: "quentin@email.com"
+  roles_mask: 1
+
+aaron_person:
+  id: 2
+  first_name: "aaron"
+  last_name: "spiggle"
+  email: "aaron@email.com"
+
+three:
+  id: 3
+  first_name: "no_user"
+  last_name: "smith"
+
+fred:  
+  first_name: "fred"
+  last_name: "blogs"
+  email: "fred@email.com"
+  can_edit_projects: true
+  can_edit_institutions: true
+
+no_first_name:
+  id: 6
+  last_name: "lastname"
+
+no_last_name:
+  id: 7        
+  first_name: "firstname"
+
+double_firstname:
+  id: 8        
+  first_name: "Fred David"
+  last_name: "Bloggs"
+  email: "fred_blogs@email.com"
+
+double_lastname:
+  id: 9        
+  first_name: "Fred"
+  last_name: "Smith Jones"
+
+double_barrelled_lastname:
+  id: 10        
+  first_name: "Fred"
+  last_name: "Smith-Jones"
+
+cant_edit:
+  id: 11        
+  first_name: "Cant"
+  last_name: "Edit"
+  can_edit_projects: false
+  can_edit_institutions: false
+
+can_edit:
+  id: 12
+  first_name: "Can"
+  last_name: "Edit"
+  can_edit_projects: true
+  can_edit_institutions: true
+
+not_registered:
+  id: 13
+  first_name: "Fred"
+  email: "test@test.com"
+
+
+
+
+# ******** Fixtures below this point used with new Rails association mechanism - hence, no IDs defined ********
+
+aaron_openid_person:  
+  first_name: "aaron openid"
+  last_name: "spiggle"
+  email: "aaron_openid@email.com"
+
+pal:
+  first_name: "A"
+  last_name: "PAL"
+  email: "pal@test.com"
+  roles_mask: 2
+  can_edit_projects: true
+  can_edit_institutions: true
+
+person_for_owner_of_my_first_protocol:
+  first_name: "OwnerOf"
+  last_name: "MyFirstProtocol"
+  email: "owner@protocol.com"
+
+person_for_owner_of_fully_public_policy:
+  first_name: "OwnerOf"
+  last_name: "FullyPublicPolicy"
+
+
+person_for_owner_of_download_for_all_sysmo_users_policy:
+  first_name: "OwnerOf"
+  last_name: "DownloadForAllSysmoUsersPolicy"
+
+
+person_for_owner_of_editing_for_all_sysmo_users_policy:
+  first_name: "OwnerOf"
+  last_name: "EditingForAllSysMOUsersPolicy"
+
+
+person_for_owner_of_private_policy_using_custom_sharing:
+  first_name: "OwnerOf"
+  last_name: "PrivatePolicyUsingCustomSharing"
+
+
+random_userless_person:
+  first_name: "random"
+  last_name: "person"
+  email: "random@email.com"
+
+
+person_not_associated_with_any_projects:
+  first_name: "free"
+  last_name: "spirit"
+  email: "not@associated.com"
+
+
+person_to_associate_with_protocols_owning_users:
+  first_name: "person"
+  last_name: "place_holder"
+
+
+person_for_test_user_only_in_whitelist:
+  first_name: "TestAccessor"
+  last_name: "OnlyInWhitelist"
+
+
+person_for_test_user_only_in_blacklist:
+  first_name: "TestAccessor"
+  last_name: "OnlyInBlacklist"
+
+
+person_for_sysmo_user_in_blacklist:
+  first_name: "SysMO-User"
+  last_name: "InBlacklist"
+
+
+person_for_sysmo_user_both_in_blacklist_and_whitelist:
+  first_name: "SysMO-User"
+  last_name: "InWhitelistAndBlacklist"
+
+
+person_for_sysmo_user_who_wants_to_access_different_things:
+  first_name: "Registered-User"
+  last_name: "WantsToAccessManyThingsAndHasSomePermissions"
+
+person_for_model_owner:
+  first_name: "Model"
+  last_name: "Owner"
+
+person_for_datafile_owner:
+  first_name: "Datafile"
+  last_name: "Owner"
+  email: "data_file_owner@email.com"
+
+modeller_person:
+  first_name: "Modeller"
+  disciplines: modeller,experimentalist
+  email: "modeller@email.com"
+
+person_without_group:
+  first_name: "Lonely"
+  email: "lonely@email.com"
+
+person_without_user:
+  first_name: "Userless"
+  email: "userless@email.com"
+
+person_for_default_page:
+  first_name: "Fred"
+  last_name: "Aardvark"
+  email: "aadvark@email.com"
+
+person_for_pagination_order_test:
+  first_name: "Fred"
+  last_name: "Azbo"
+  email: "azbo@email.com"
+
+person_with_links_in_description:
+  first_name: "Spam"
+  last_name: "Bot"
+  email: "spambot@spam.com"
+  description: "Visit my websites! http://www.website.com, http://www.google.com"
+
+duplicate_1:
+  first_name: "I Am a"
+  last_name: "duplicate"
+  email: "dup1@email.com"
+
+duplicate_2:
+  first_name: "I Am a"
+  last_name: "duplicate"
+  email: "dup2@email.com"
+
+person_for_project_manager:
+  first_name: "Project"
+  last_name: "Manager"
+  can_edit_projects: false
+  can_edit_institutions: false
+  roles_mask: 4
+  
+gatekeeper_person:
+  first_name: "Gatekeeper"
+  last_name: "Last"
+  email: "gatekeeper@email.com"
+  roles_mask: 16

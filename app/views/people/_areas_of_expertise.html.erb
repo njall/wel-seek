@@ -1,0 +1,27 @@
+<% tools_list=person.tools -%>
+<% expertise_list=person.expertise -%>
+
+<div id="expertise">
+  
+    <p id="expertise">
+      <label>Expertise:</label>
+
+      <%  if expertise_list.blank? -%>
+        <span class='none_text'>Not known</span>
+      <% else %>
+
+        <%= list_item_tags_list expertise_list,:type=>:expertise %>
+      <% end %>
+    </p>
+
+    <p id="tools">
+      <label>Tools:</label>
+
+      <%  if tools_list.blank? -%>
+        <span class='none_text'>Not known</span>
+      <% else %>
+        <%= list_item_tags_list tools_list,:type=>:tools %>
+      <% end %>
+    </p>
+    
+  </div>
