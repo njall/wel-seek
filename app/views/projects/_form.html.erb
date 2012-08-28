@@ -25,7 +25,7 @@
 		</p>
 	</div>
 </div>
-<% if !Seek::Config.organisms_disabled %>
+<% if Seek::Config.organisms_enabled %>
     <%= puts "<h2>Organisms Relevant To This Project</h2>" %>
     <%= render :partial=>"projects/organisms_selection", :locals=>{:f=>f} -%>
 <% end %>

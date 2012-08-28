@@ -236,7 +236,7 @@ module Seek
       :biosamples_enabled, :samples_enabled, :specimens_enabled,
       :data_files_enabled, :models_enabled, :protocols_enabled,
       :publications_enabled, :presentations_enabled, :events_enabled, :help_enabled,
-      :organisms_disabled]
+      :organisms_enabled]
 
 
 

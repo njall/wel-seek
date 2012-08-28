@@ -7,7 +7,7 @@
       <%= list_item_optional_attribute "Internal web page", h(resource.wiki_page), h(resource.wiki_page) %>
   <% end %>
 </div>
-<% unless Seek::Config.organisms_disabled %>
+<% if Seek::Config.organisms_enabled %>
 <div class="list_item_right_column">
   <%= list_item_simple_list resource.organisms, "Organisms" %>
 </div>

@@ -4,6 +4,10 @@
        studies << i.studies.select(&:can_view?)
    end
 -%>
+<% if Seek::Config.systems_biology_mode==false %>
+<%    @experiment.experiment_class= ExperimentClass.for_type("experimental")  %>
+<% end %>
+
 <% if investigations.blank? %>
     <ul class="sectionIcons">
         <%= image_tag_for_key('arrow_right', new_investigation_path(:create_from_asset=>@experiment.create_from_asset), "New investigation", {:style=>"font-size:larger"}, "New investigation") -%>
@@ -18,7 +22,7 @@
           <h1><%=  @experiment.is_modelling? ? "Modelling analysis creation" : "Experiment creation" -%></h1>
         </div>
 
-        <% unless @experiment.experiment_class %>
+        <% unless @experiment.experiment_class || Seek::Config.systems_biology_mode==false %>
           <div class="experiment_selection">
 
             <span>Please select the class of experiment you wish to create</span>

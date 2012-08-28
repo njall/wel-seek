@@ -1,0 +1,154 @@
+
+experiment types:
+  title: experiment types
+  children: experimental_experiment_type, modelling_analysis_type
+
+experimental_experiment_type:
+  title: experimental experiment type
+  children: genomics,metabolomics,proteomics,single_cell,transcriptomics, fluxomics
+
+fluxomics:
+  title: fluxomics
+
+genomics:
+  title: genomics
+  children: comparative_genomics,DNA_sequencing,genotyping,primer_design,SNP_detection  
+
+comparative_genomics:
+  title: comparative genomics
+
+DNA_sequencing:
+  title: DNA sequencing
+
+genotyping:
+  title: genotyping
+
+primer_design:
+  title: primer design
+
+SNP_detection:
+  title: SNP detection
+
+#---------------------------
+metabolomics:
+  title: metabolomics
+  children: cell_growth_optimisation,metabolite_profiling,metabonomics
+
+cell_growth_optimisation:
+  title: cell growth optimisation
+
+metabolite_profiling:
+  title: metabolite profiling
+  children: catabolic_response,glucose_pulse, flux_balance_analysis
+
+flux_balance_analysis:
+  title: flux balance analysis
+
+catabolic_response:
+  title: catabolic response
+
+glucose_pulse:
+  title: glucose pulse
+
+metabonomics:
+  title: metabonomics
+
+#-------------------------------
+
+proteomics:
+  title: proteomics
+  children: immune_precipitation,post-translational_modification,protein-protein_interaction,protein_expression_profiling,protein_identification,protein_structural_analysis
+
+immune_precipitation:
+  title: immune precipitation
+
+post-translational_modification:
+  title: post-translational modification
+
+protein-protein_interaction:
+  title: protein-protein interaction
+
+protein_expression_profiling:
+  title: protein expression profiling
+
+protein_identification:
+  title: protein identification
+  children: protein_purification
+
+protein_purification:
+  title: protein purification
+
+protein_structural_analysis:
+  title: protein structural analysis
+
+#----------------------------------
+
+single_cell:
+  title: single cell
+  children: FRAP
+
+#-----------------------------------
+
+transcriptomics:
+  title: transcriptomics
+  children: Comparative_genomic_hybridization,gene_expression_profiling,methylation_profiling,microRNA_profiling,RNAi,tiling_path
+
+Comparative_genomic_hybridization:
+  title: Comparative genomic hybridization
+
+gene_expression_profiling:
+  title: gene expression profiling
+  children: cDNA_microarray,transcriptional_profiling,translational_profiling
+
+cDNA_microarray:
+  title: cDNA microarray
+
+transcriptional_profiling:
+  title: transcriptional profiling
+
+translational_profiling:
+  title: translational profiling
+
+methylation_profiling:
+  title: methylation profiling
+
+microRNA_profiling:
+  title: microRNA profiling
+
+RNAi:
+  title: RNAi
+
+tiling_path:
+  title: tiling path
+
+
+modelling_analysis_type:
+  title: modelling analysis type
+  children: cell_cycle,enzymology,gene_expression,gene_regulatory_network,metabolic_network,metabolism,signal_transduction,translation, protein_interations
+
+cell_cycle:
+  title: cell cycle
+
+enzymology:
+  title: enzymology
+
+gene_expression:
+  title: gene expression
+
+gene_regulatory_network:
+  title: gene regulatory network
+
+metabolic_network:
+  title: metabolic network
+
+metabolism:
+  title: metabolism
+
+signal_transduction:
+  title: signal transduction
+
+translation:
+  title: translation
+
+protein_interations:
+  title: protein interactions

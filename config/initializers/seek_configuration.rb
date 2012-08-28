@@ -85,4 +85,4 @@ Seek::Config.default :publications_enabled, true
 Seek::Config.default :presentations_enabled, false
 Seek::Config.default :events_enabled, false
 
-Seek::Config.default :organisms_disabled, true
+Seek::Config.default :organisms_enabled, false

@@ -7,7 +7,7 @@
   <h3>Create</h3>
   <ul>  
     <li><%= link_to "Create an institution", new_institution_path %></li>
-<% unless Seek::Config.organisms_disabled %>
+<% if Seek::Config.organisms_enabled %>
     <li><%= link_to "Create an organism", new_organism_path %></li>
 <% end %>
     <li><%= link_to "Create a project", new_project_path %></li>
