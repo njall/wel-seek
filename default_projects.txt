@@ -1,0 +1,122 @@
+
+
+a = Project.new(:name=>"COHSE: Conceptual Open Hypermedia Service",
+:webpage=>"http://cohse.cs.manchester.ac.uk/",
+:description=>"Hypermedia assists the user in navigating the available information space; this space is diverse and distributed, populated by multimedia objects which may be persistent, constantly updated, and perhaps dynamically generated. In a global information environment, where the number and size of potential information resources is huge, of variable quality and aimed at diverse audiences, the focused retrieval of pertinent information becomes a vital issue.
+
+The aim of COHSE was to investigate methods to improve significantly the quality, consistency and breadth of linking of WWW documents at retrieval time (as readers browse the documents) and authoring time (as authors create the documents). It produced a COHSE (Conceptual Open Hypermedia Services Environment) using three leading-edge technologies:
+
+    an ontological reasoning service used to represent a sophisticated conceptual model of document terms and their relationships;
+    a Web-based open hypermedia link service that can offer a range of different link-providing facilities in a scalable and non-intrusive fashion;
+    the integration of the ontology service and the open hypermedia link service to form a conceptual hypermedia system to enable documents to be linked via metadata describing their contents;
+
+COHSE's approach differed from many others in the Semantic Web field as the emphasis was on hypertext authoring. Much interest is currently focused on the process of resource discovery and search engine technology - less attention is then placed on issues relating to results presentation or how the use of metadata, reasoning and open architectures can help us in constructing hypertext structures. The Semantic Web is a Web - this point should not be lost or forgotten.
+
+COHSE was originally a joint project between the Manchester Information Management Group (IMG), and Southampton's Intelligence, Agents and Multimedia (IAM) group. Later development of the system was supported by Sun Microsystems.
+
+The system is currently being used to provide access to web resources for life scientists within the Sealife project.")
+
+a.save
+
+a = Project.new(:name=> "",
+		:webpage=> "",
+		:description=> "")
+a.save
+a.clear
+
+a = Project.new(:name=> "",
+		:webpage=> "",
+		:description=> "")
+a.save
+a.clear
+
+a = Project.new(:name=> "",
+		:webpage=> "",
+		:description=> "")
+a.save
+a.clear
+
+a = Project.new(:name=> "",
+		:webpage=> "",
+		:description=> "")
+a.save
+a.clear
+
+a = Project.new(:name=> "",
+		:webpage=> "",
+		:description=> "")
+a.save
+a.clear
+
+a = Project.new(:name=> "",
+		:webpage=> "",
+		:description=> "")
+a.save
+a.clear
+
+a = Project.new(:name=> "",
+		:webpage=> "",
+		:description=> "")
+a.save
+a.clear
+
+a = Project.new(:name=> "",
+		:webpage=> "",
+		:description=> "")
+a.save
+a.clear
+
+a = Project.new(:name=> "",
+		:webpage=> "",
+		:description=> "")
+a.save
+a.clear
+
+a = Project.new(:name=> "",
+		:webpage=> "",
+		:description=> "")
+a.save
+a.clear
+
+a = Project.new(:name=> "",
+		:webpage=> "",
+		:description=> "")
+a.save
+a.clear
+
+a = Project.new(:name=> "",
+		:webpage=> "",
+		:description=> "")
+a.save
+a.clear
+
+a = Project.new(:name=> "",
+		:webpage=> "",
+		:description=> "")
+a.save
+a.clear
+
+
+i= Investigation.new(:title=> "User Investigation: Investigate The Visual Experiences Of Sighted Individuals Interacting With Web–2.0
+",
+		     :description=> "TheWeb–2.0 is based
+on a visual interaction model, understanding this model in the
+context of sighted users will enable us to understand the interaction
+requirements needed to support users with visual disability.
+Understanding how sighted users interact with multiple
+information streams embedded into Web (non-linear and
+hyper-linked) documents with dynamically updating information
+streams will provide important insights that will help us
+to understand how visually disabled users would likewise be
+able to interact with these documents. A set of hypotheses can
+then be formulated to focus our preliminary ideas.")
+i.save
+s = Study.new(:title=>"Eye tracking investigation of how sighted users allocate content to dynamic Web content
+Sighted User Interaction Investigation",
+ :description=>"Eye tracking investigation of how sighted users allocate content to dynamic Web content
+")
+s.save
+
+e= Experiment.new(:title=>"Predicting whether people view dynamic content on the Web
+", 
+		:description=> "Predicting whether people view dynamic content on the Web")
