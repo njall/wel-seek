@@ -32,7 +32,7 @@
             <%= text_or_not_specified(@project.wiki_page,:external_link=>true) %>
           </p>
         <% end %>
-	<% unless Seek::Config.organisms_disabled %>
+	<% if Seek::Config.organisms_enabled %>
         <p>
           <label>Organisms:</label>
           <%= organisms_link_list @project.organisms -%>
