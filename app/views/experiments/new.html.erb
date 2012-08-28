@@ -4,6 +4,13 @@
        studies << i.studies.select(&:can_view?)
    end
 -%>
+
+<% if Seek::Config.systems_biology_mode==false
+      @experiment.experiment_class=ExperimentClass.for_type("experimental")
+  end
+%>
+
+
 <% if investigations.blank? %>
     <ul class="sectionIcons">
         <%= image_tag_for_key('arrow_right', new_investigation_path(:create_from_asset=>@experiment.create_from_asset), "New investigation", {:style=>"font-size:larger"}, "New investigation") -%>
