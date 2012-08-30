@@ -1,0 +1,158 @@
+COHSE:
+  name: "COHSE: Conceptual Open Hypermedia Service"
+  web_page: "cohse.cs.manchester.ac.uk"
+  description: "Hypermedia assists the user in navigating the available information space; this space is diverse and distributed, populated by multimedia objects which may be persistent, constantly updated, and perhaps dynamically generated. In a global information environment, where the number and size of potential information resources is huge, of variable quality and aimed at diverse audiences, the focused retrieval of pertinent information becomes a vital issue.
+The aim of COHSE was to investigate methods to improve significantly the quality, consistency and breadth of linking of WWW documents at retrieval time (as readers browse the documents) and authoring time (as authors create the documents). It produced a COHSE (Conceptual Open Hypermedia Services Environment) using three leading-edge technologies:
+    an ontological reasoning service used to represent a sophisticated conceptual model of document terms and their relationships;
+    a Web-based open hypermedia link service that can offer a range of different link-providing facilities in a scalable and non-intrusive fashion;
+    the integration of the ontology service and the open hypermedia link service to form a conceptual hypermedia system to enable documents to be linked via metadata describing their contents;
+COHSE's approach differed from many others in the Semantic Web field as the emphasis was on hypertext authoring. Much interest is currently focused on the process of resource discovery and search engine technology - less attention is then placed on issues relating to results presentation or how the use of metadata, reasoning and open architectures can help us in constructing hypertext structures. The Semantic Web is a Web - this point should not be lost or forgotten.
+COHSE was originally a joint project between the Manchester Information Management Group (IMG), and Southampton's Intelligence, Agents and Multimedia (IAM) group. Later development of the system was supported by Sun Microsystems.
+The system is currently being used to provide access to web resources for life scientists within the Sealife project."
+
+COPE:
+  name: "COPE: behavioural and coping strategies on the Web"
+  web_page: "http://wel.cs.manchester.ac.uk/research/cope/"
+  description: "The aim of the COPE project is to investigate the behavioural strategies users adopt while interacting with the World Wide Web, identifying coping situations and providing technological solutions to overcome such difficulties. "
+
+DANTE:
+  name: "DANTE: Mobility Support for Visually Impaired Web Travellers"
+  web_page: "http://dante.cs.manchester.ac.uk/"
+  description: "The 'Dante' project is looking at how visually impaired people access Hypermedia environments, of which Web is the most popular example. The main goal is to devise a tool that uses a model-driven approach to analyse and transform Web pages to increase mobility in virtual environment.
+
+Sreen readers, unlike sighted users, cannot see the implicit structural and mobility knowledge encoded within the visual presentation of Web pages. We use Semantic Web technologies to make this knowledge explicit and accessible to screen readers. In this context, Semantic Web technologies are not used to convey content (what a Web page is about or for) but to convey the structural and mobility properties of Web pages.
+
+The mobility, or ease of travel, of visually impaired Web users is reduced since most Web pages are usually designed for visual interaction. Therefore, in a visually impaired person's environment objects that support travel are missing or inaccessible altogether. Our goal is to enhance the travel experience of visually impaired Web travellers by annotating pages with the Web Authoring for Accessibility (WAfA) ontology that aims to encapsulate rich structural and navigational knowledge about these objects. We propose a semi-automated tool, Dante, which encodes techniques for the support of travel upon the Web. The main goal of Dante, as illustrated below, is to (1) analyse Web pages to identify objects that support mobility and travel; (2) discover their roles; (3) annotate them with the WAfA ontology in order to make their roles explicit and (4) transform pages based on the annotations to enhance the provided mobility support. "
+
+
+EIVAA:
+  name: "EIVAA: Empirical Investigation of Visual Aesthetics and Accessibility"
+  web_page: "http://wel.cs.manchester.ac.uk/research/eivaa/"
+  description: "Empirical research suggests that the use of visual aesthetics influences the way people perceive and interact with the World Wide Web (Web). This is not very surprising when we think about the fact that the Web is predominantly a visual medium. What is rather perplexing is some of the strong relationships that have been found to exist between visual aesthetics and certain aspects of user experience (UX), like usability and credibility. Unfortunately, the impact of visual aesthetics on accessibility or ease-of-use for people with disabilities is one area that has not benefited much from empirical research in the context of the Web. Accessibility is an emerging and equally important aspect of user experience. Although visual aesthetics has been found to have positive relationships with other facets of user experience, it is speculated to hinder people with disabilities from effectively using the Web for their information needs, especially those with visual impairments. In the EIVAA project, we propose to investigate the link between visual aesthetics and Web accessibility with the goal of supporting the delivery of aesthetic and accessible Web contents. "
+
+HuCEL:
+  name: "HuCEL: Human Centred Event Linking"
+  web_page: "http://wel.cs.manchester.ac.uk/research/hucel/"
+  description: "HuCEL investigates methods to extract keywords from the main content of a news Web pages to automatically generate search queries that scan the Web for related events, and display this additional information to users next to the original story. A technical evaluation of the methods indicates that users found queries to be related to the story, demonstrating that the algorithm produced quality keywords. A qualitative and quantitative user study of the links generated by the HuCEL platform also demonstrates that users found these associations to be related to the story under discussion."
+
+MSO:
+  name: "MSO: Multiple Screen Orchestration"
+  web_page: "http://wel.cs.manchester.ac.uk/research/mso/"
+  description: " The BBC is moving towards providing programme content simultaneously across two or more displays. The primary vehicle for a programme may still be a television (or its online equivalent), but complementary, updating information will be available via a mobile, laptop or tablet. A wildlife documentary, for example, may be accompanied by details of the animal currently onscreen, or may offer insight into how the scene was filmed.
+
+The Web Ergonomics Lab (WEL) is working in partnership with the BBC to determine how to orchestrate and update programme information across multiple displays. The MSO pilot study is examining whether models predicting how people view content developed in the SASWAT project, can be modified to apply to situations with multiple screens.
+
+The Multiple Screen Orchestration (MSO) project is funded by the University of Manchester Knowledge Transfer Account under the Concept and Feasibility Study Scheme."
+
+OSS:
+  name: "OSS: Online Social Support for Lung Cancer Patients"
+  web_page: "http://wel.cs.manchester.ac.uk/research/online-social-support-for-lung-cancer-patients/"
+  description: "WEL is working in partnership with Intel, Finerday and the School of Nursing, Midwifery and Social Work to determine the feasibility of developing personalised, adaptable healthcare advice and social support.
+
+The Online Social Support for Lung Cancer Patients (OSS) feasibility study is running from January to June 2012.
+
+Personas for Lung Cancer Patients, Carers and Healthcare Professionals, developed through the Ethnographic Coding of Empirical Data"
+
+RIAM:
+  name: "RIAM: Reciprocal Interoperability of Accessible and Mobile Webs"
+  web_page: "http://wel.cs.manchester.ac.uk/research/riam/"
+  description: "With the launch of the W3C's Mobile Web Initiative (MWI) it has become increasingly obvious that access to the Mobile Web suffers from interoperability and usability problems similar to those experienced by disabled people when accessing the existing Web. With the move to small screen size, low bandwidth, and different operating modalities, all Mobile device users effectively suffer the sensory and cognitive impairments normally only experienced by disabled users.
+
+The aim of RIAM is to investigate ways in which to integrate, to mutual advantage, research into the Accessible and Mobile World Wide Webs (Web), to develop a common infrastructure, and to validate this infrastructure using existing Web documents and Mobile client simulators.
+
+The research will investigate the use of Web documents and document objects in order to ensure device independence and place the Mobile Web in a position to access the entire Web. We assert that if the Web is accessible then it is also Mobile, and will validate our assertions by running a series of iterative experiments, testing the results of these experiments against our objectives, and using the results to refine our models and software tools.
+
+Thus RIAM has four major aims:
+
+    To review current guidelines, best practices, and techniques related to Web page interaction and to the intersection between these guidelines, practices, and techniques;
+    Use the results of this research to design a system allowing the Accessible Web and Mobile Web to interoperate;
+    To devise a framework and strategy to migrate this research into the Mobile Web domain;
+    To develop an automatable validation methodology (and Key Performance Indicators) to test a Web Document’s device independence (ergo its suitability for the Mobile Web) based on research from the Accessible Web.
+"
+
+SADIe:
+  name: "SADIe: Structural-Semantics for Accessibility and Device Independence"
+  web_page: "http://wel.cs.manchester.ac.uk/research/sadie/"
+  description: "
+
+Currently, the World Wide Web is visual-centric, with web sites often being designed only with the presentation of data in mind. A consequence of this design perspective is that information contained within the data is only accessible implicitly through the layout of the web page, rather than explicitly through the data itself. For example, if you are a sighted user, you will be aware that on the left-hand-side of this webpage, there is a menu. You know this because there is a box, within which there is a column of text. The short phrases of text within this column change colour when the mouse is moved over them, indicating that the text links to other areas of the website. However, there is nothing stating that this is a menu. The knowledge telling you that it is a menu is implicitly tied to how the links are presented on screen. While this implicit knowledge is relatively easy to access for sighted users, it is often difficult to access for visually impaired computer users.
+
+Transcoding is the adaptation of content from one format into another. There have been many previous attempts at transcoding web pages so that implicit information is more accessible to visually impaired users. These attempts can be roughly segregated into two groups:
+
+    Rule Based Transcoding: Systems that use rule based transcoding attempt to apply patterns or known statistics to web pages in order to extract the implicit information. For example, it may be assumed that if there is a column of links on the left-hand-side of the page, then that column of links is a menu. Whilst this rule works for most websites (indeed, it would work for the SADIe website which you are now reading), it is not necessarily always true. However, rule based transcoding systems do have the advantage that they can work with any website. One set of rules fits all websites and so you can attempt to transcode anything in the web.
+    Semantic Transcoding: Systems that use semantic transcoding attempt to capture the meaning of the elements of a webpage. This is usually achieved by annotating all the elements that occur within the page. For example, if there is a menu contained within the webpage, then a comment is added to the source code that states “this is a menu”. The transcoding system then has to look for the annotations and manipulate the content as it deems appropriate. The benefit of such systems is that they are incredible accurate. A menu is clearly labelled as a menu, so therefore it cannot be anything else (unless the annotator made a mistake). However, the big disadvantage of this is that it is time consuming, tedious and sometimes impossible to annotate every webpage on every website in order for it to be transcoded.
+
+The SADIe project is an investigation into a hybrid solution to transcoding web pages in order to aid visually impaired users. Returning to the menu example above, we can surmise that a menu is a menu because it looks like a menu. Assuming that it is the presentation of the links that creates a menu, we must ask ourselves the question 'what tells the browser to make a collection of links look like a menu?' One of the answers to this question is that the Cascading Style Sheet (CSS) associated with the webpage tells the browser to render the links as a menu. Therefore, we can assume that the rendering information encoded within the CSS of the webpage provides the implicit information that tells the user where the menu is on the webpage. Therefore, if we know what the elements of the CSS are rendering on screen, we can capture the knowledge and make it more explicit. This gives us the ability to accurately transcode a webpage in the same manner that annotations allow semantic transcoding to accurately transcode a webpage, but without the need for annotating the page itself. Instead, we just annotate the CSS file. However, it tends to be the case that a single CSS file describes the rendering of an entire website. Websites can span thousands of web pages, so by accurately describing a single file, we can potentially transcode thousands of web pages on the website.
+
+SADIe therefore gives us the accuracy of semantic transcoding, without the time consuming tediousness of annotating every web page. Yet we also get the ability to transcode thousands of webpage in a similar fashion to rule-based transcoding, but with a higher degree of accuracy."
+
+SASWAT:
+  name: "SASWAT: Single Structured Accessibility Stream for Web 2.0 Access Technologies"
+  web_page: "http://wel.cs.manchester.ac.uk/research/saswat/"
+  description: "The growth of Web 2.0 technologies is fundamentally changing the way that people interact with the Web. A short time ago, navigating the Web was simply a matter of clicking links, moving from one static page to another. Now it’s possible to spend a considerable amount of time interacting with a single page through its 'dynamic micro content' – items such as tickers, slideshows, videos, search facilities – that update independently, without changing the URL. For a good example of this in action, take a look at the Yahoo! or iGoogle Web portals.
+
+These Web pages provide an exciting, interactive experience for sighted users. For visually disabled users, however, they simply result in further barriers to accessibility. Adaptive technologies, such as screen readers, are currently unable to deal with dynamic updates.
+
+The SASWAT project aims to address this, by understanding the sighted user’s experience, and mapping this to audio for visually disabled users.
+
+There are two parallel strands to the SASWAT research:
+
+    We consider that viewing dynamic Web pages has many of the characteristics of a conversation. As the user reads the page, so the topic of conversation changes. If some of this information changes, how do we tell the user? Is the information sufficiently important that we must interrupt immediately, or has the conversation moved on sufficiently that the change is of little interest? We aim to use eye-tracking studies to develop a model of how attention is allocated when users interact with dynamic Web pages, and use this model as a basis for controlling information flow so that interaction can occur as naturally as possible.
+
+    Dynamic updates can be classified into patterns according to how the user interacts with them, and developers often use patterns from libraries such as the Yahoo! pattern library when developing sites. Can analysis of where and how these patterns are implemented be combined with experimental data about how people use them to suggest ways of presentation? In particular, can developers use pattern class as a basis for making the update more accessible, e.g., through ARIA markup?"
+
+SCWeb2:
+  name: "SCWeb2: Senior Citizens On The Web 2.0"
+  web_page: "http://wel.cs.manchester.ac.uk/research/scweb2/"
+  description: "The Web is changing! The much vaunted Web 2.0 sees once static pages evolving into hybrid applications. Content which was once simple to surf is now becoming increasingly complicated due to the many updating components 'dotted' throughout the page. The information overload and visual complexity is significant. However the sites most effected by these changes are often the most popular for social interaction. Sites such as Flickr, YouTube, MySpace, Facebook and Google Maps all rely on these new components and are all popular with older users. This increased complexity is a major problem for an ageing population of ‘knowledge workers’ expected to work longer into old age. Indeed, we already know that seniors experience an increased cautiousness and a hesitancy about making responses that may be incorrect. In ‘noisy’ information environments this increased complexity produces lower performance and higher levels of stress and frustration which negatively effect both work and social activity.
+Objectives
+
+Without a full understanding of the interaction of older people with Web 2.0 technologies the Web will rapidly become unable to support their interaction needs. Only by a deep understanding of this interaction can we propose assistive solutions. Therefore the objective of SCWeb2 is to create a cognitive model of ageing users’ Web 2.0 interactivity and suggest interventions, realised as an experimental assistive advisor, to overcome their interactivity problems. Therefore, by the end of this project we expect to be able to:
+
+    Develop a profound understanding of the nature and evolution of ageing users cognition and perception of Web 2.0 based information in order to better understand the nature of their interaction.
+    Build a model of the interaction of older users and the Web 2.0 including an experimental framework to facilitate evaluation.
+    Design, develop, and evaluate a prototypical experimental application for older surfers using the Web 2.0."
+
+TEOA:
+  name: "TEOA: Text Entry for Older Adults"
+  web_page: "http://wel.cs.manchester.ac.uk/research/teoa/"
+  description: " The Text Entry for Older Adults (TEOA) project is funded by the University of Manchester Knowledge Transfer Account under the Concept and Feasibility Study Scheme.
+
+WEL is working with partners CTIC (Spain), Buttercup Communications* and Age Concern (Wythenshaw) to understand the feasibility of transferring error-correction software developed in RIAM to a wider mobile phone platform.
+
+In addition, the project is examining the possibility of using logging software, also developed in the RIAM project, to the MyMobileWeb platform. "
+
+ViSAS:
+  name: "ViSAS: Visual Sequencing for Audio Serialisation"
+  web_page: "http://wel.cs.manchester.ac.uk/research/visas/"
+  description: "Sighted people have access to large amounts of visual information simultaneously; blind people, however, experience an audio translation in a single, linear stream. Although these two experiences initially appear quite different, in fact they share the concept of the 'locus of attention'; a single source or location of sensory input that a person attends to at a given time. If we can determine how sighted people move their attention through visual information, we may be able to predict a sequential path through a parallel visual resource; effectively, linearizing visual content.
+
+We propose a unified investigation centred around collecting eye movement, biometric and observational/interview data from people viewing artworks, and using this to determine the serial `path’ taken through the work. Our objective is to understand the characteristics of visual serialisation including its extent, variability and limitations, then use this understanding to predict a person’s path through a visual resource, thereby allowing the content to be accurately and effectively moved from a visual to an auditory presentation. In this way we can increase our understanding of how people experience art, and support any person who does not have access to the displayed resource.
+
+A pilot study has been performed at Manchester City Art Gallery, involving eye-tracking members of staff and the public who looked at a series of paintings. This fun and interesting experiment has provided some interesting results, suggesting avenues for future research, and captured the attention of the media."
+
+ViCRAM:
+  name: "ViCRAM: Visual Complexity Rankings and Accessibility Metrics"
+  web_page: "http://wel.cs.manchester.ac.uk/research/vicram/"
+  description: " The World Wide Web (Web) has become the means of distribution and use of information by individuals around the world. Most Web pages focus on visual presentation to implicitly help users understand and interact with the content. When sighted users reach a Web page, they can scan the page and get a comprehension of it in an average of 5 seconds. This view helps them to decide if the page is relevant to their task and move towards the part of the page that interests them. On the other hand, if visually impaired users want to get an idea of how the page looks they have to listen to the entire page being read from the top left corner of the screen to the bottom right. This is because assistive technologies, such as screen readers, render the source code and do not understand what they read. In addition, the source code is not always accessible. This happens when designers do not always follow the correct guidelines for accessibility and use different coding conventions to represent page elements such as headings and links.
+
+ViCRAM stands for Visual Complexity Rankings and Accessibility Metrics and is a project that aims to contribute for the improvement of accessible interface design by defining a framework that describes visually complex Web pages. We try to relate the visual presentation and structure of a Web page with a sighted user’s interaction and browsing behaviour. The framework will be used for both giving feedback on the visual clutter of a page and as guidelines for transcoding a page to result in a simpler and more accessible one.
+
+ViCRAM is a project that will contribute for the improvement of accessible interface design. We study sighted users’s behaviour and eye movement while interacting with a Web page to elicit their implicit knowledge of visual perception. A relationship can then be distinguished between Web page visual complexity and sighted users’s cognition. The project’s objective is to create a framework that will be used to identify Web page visual complexity for two purposes: to give feedback to the user regarding the presentation of the page; and to help reduce the visual clutter of the page by using it as a guide for the Web page transcoding process. "
+
+WIMWAT:
+  name: "WIMWAT: Widget Identification and Modification for Web 2.0 Access Technologies"
+  web_page: "http://wel.cs.manchester.ac.uk/research/wimwat/"
+  description: "
+
+The evolution of the World Wide Web (Web) affects the way people develop Web pages and interact with it. Not too long ago, navigating the Web was simply a matter of clicking links, moving from one static page to another, and Web forms require the page to be reloaded every time communication is required between the client and the server. Now it’s possible to spend a considerable amount of time interacting with a single page through its 'dynamic micro-content' – items such as Tickers, Slideshows and search facilities – that update independently, without requiring the page to be reloaded. These concepts are popular among users and they can be found throughout the Web; just take a look at Yahoo! or AOL.
+
+Web pages with the latter capabilities provide an exciting, interactive experience for sighted users. For visually disabled users, however, they simply result in further barriers when accessing these pages. Assistive technologies, such as screen readers, are currently unable to effectively deal with dynamic updates. This is because content has to be presented to the user before Assistive technologies can interpret them, but dynamic micro-content actively changes the presented content accordingly to how the developers designed them. Often these changes go unnoticed as Assistive technologies are not able to adapt to these advancement.
+
+The WIMWAT project aims to address this with a preemptive approach, by identifying the type of dynamic micro-content on the page and where they are located, so that Assistive technologies can warn their users or pay more focus on these areas.
+Objectives
+
+    Classify the different types of popular dynamic micro-content area (widgets).
+    Comprehend the full Web page source code to identify the widgets before the page is presented to the user. Through this way, areas where widgets are likely to occur can be predicted.
+
+"

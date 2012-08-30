@@ -111,6 +111,13 @@ namespace :seek do
     Fixtures.create_fixtures(File.join(RAILS_ROOT, "config/default_data"), "model_formats")
   end
 
+  task(:projects=>:environment) do
+      revert_fixtures_identify
+      Project.delete_all
+      Fixtures.create_fixtures(File.join(RAILS_ROOT, "config/default_data"), "projects")
+  end
+
+  end
   task(:experiment_types=>:environment) do
     revert_fixtures_identify
     ExperimentType.delete_all
