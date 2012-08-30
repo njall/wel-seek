@@ -1,6 +1,6 @@
 COHSE:
   name: "COHSE: Conceptual Open Hypermedia Service"
-  web_page: "cohse.cs.manchester.ac.uk"
+  web_page: "http://cohse.cs.manchester.ac.uk"
   description: "Hypermedia assists the user in navigating the available information space; this space is diverse and distributed, populated by multimedia objects which may be persistent, constantly updated, and perhaps dynamically generated. In a global information environment, where the number and size of potential information resources is huge, of variable quality and aimed at diverse audiences, the focused retrieval of pertinent information becomes a vital issue.
 The aim of COHSE was to investigate methods to improve significantly the quality, consistency and breadth of linking of WWW documents at retrieval time (as readers browse the documents) and authoring time (as authors create the documents). It produced a COHSE (Conceptual Open Hypermedia Services Environment) using three leading-edge technologies:
     an ontological reasoning service used to represent a sophisticated conceptual model of document terms and their relationships;
