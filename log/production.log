@@ -5741,3 +5741,202 @@ Completed in 312ms (View: 91, DB: 90) | 200 OK [http://0.0.0.0/projects]
   [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
   [4;36;1mDbFile Destroy (0.4ms)[0m   [0;1mDELETE FROM `db_files` WHERE `id` = 13[0m
   [4;35;1mSQL (57.8ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSettings Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `settings`[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'site_base_host') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'smtp') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'smtp') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.1ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'google_analytics_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.1ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'google_analytics_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'exception_notification_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'exception_notification_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'piwik_analytics_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'open_id_authentication_store') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m   [0;1mSELECT * FROM `delayed_jobs` WHERE (handler = '--- !ruby/struct:SendPeriodicEmailsJob \nfrequency: daily\n' AND failed_at IS NULL) LIMIT 1[0m
+  [4;35;1mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m   [0mSELECT * FROM `delayed_jobs` WHERE (handler = '--- !ruby/struct:SendPeriodicEmailsJob \nfrequency: weekly\n' AND failed_at IS NULL) LIMIT 1[0m
+  [4;36;1mDelayed::Backend::ActiveRecord::Job Load (0.5ms)[0m   [0;1mSELECT * FROM `delayed_jobs` WHERE (handler = '--- !ruby/struct:SendPeriodicEmailsJob \nfrequency: monthly\n' AND failed_at IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (4.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mAnnotation::Version Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `annotation_versions`[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'events_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (19.3ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'bioportal_api_key') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.1ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'events_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'events_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (1.9ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.3ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.1ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mTextValue::Version Columns (14.8ms)[0m   [0mSHOW FIELDS FROM `text_value_versions`[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'piwik_analytics_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'jws_online_root') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.1ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'jws_online_root') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mProject Delete all (0.4ms)[0m   [0mDELETE FROM `projects` [0m
+  [4;36;1mSQL (3.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.8ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (4.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (492.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (1989.9ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSettings Columns (443.9ms)[0m   [0;1mSHOW FIELDS FROM `settings`[0m
+  [4;35;1mSettings Load (44.9ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'site_base_host') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'smtp') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'smtp') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'google_analytics_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.1ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'google_analytics_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'exception_notification_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'exception_notification_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'piwik_analytics_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.1ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'open_id_authentication_store') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (641.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mDelayed::Backend::ActiveRecord::Job Load (0.3ms)[0m   [0;1mSELECT * FROM `delayed_jobs` WHERE (handler = '--- !ruby/struct:SendPeriodicEmailsJob \nfrequency: daily\n' AND failed_at IS NULL) LIMIT 1[0m
+  [4;35;1mDelayed::Backend::ActiveRecord::Job Load (0.2ms)[0m   [0mSELECT * FROM `delayed_jobs` WHERE (handler = '--- !ruby/struct:SendPeriodicEmailsJob \nfrequency: weekly\n' AND failed_at IS NULL) LIMIT 1[0m
+  [4;36;1mDelayed::Backend::ActiveRecord::Job Load (0.1ms)[0m   [0;1mSELECT * FROM `delayed_jobs` WHERE (handler = '--- !ruby/struct:SendPeriodicEmailsJob \nfrequency: monthly\n' AND failed_at IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (543.5ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mAnnotation::Version Columns (132.3ms)[0m   [0;1mSHOW FIELDS FROM `annotation_versions`[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'events_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (18.0ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'bioportal_api_key') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'events_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'events_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.1ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'default_pages') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'limit_latest') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'is_virtualliver') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'solr_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (997.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mTextValue::Version Columns (63.7ms)[0m   [0mSHOW FIELDS FROM `text_value_versions`[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'piwik_analytics_enabled') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mSettings Load (0.2ms)[0m   [0mSELECT * FROM `settings` WHERE (`settings`.`var` = 'jws_online_root') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;36;1mSettings Load (0.2ms)[0m   [0;1mSELECT * FROM `settings` WHERE (`settings`.`var` = 'jws_online_root') AND (`settings`.`target_type` IS NULL AND `settings`.`target_id` IS NULL) LIMIT 1[0m
+  [4;35;1mProject Delete all (875.7ms)[0m   [0mDELETE FROM `projects` [0m
+  [4;36;1mSQL (715.2ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (771.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (827.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (6105.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (185.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.1ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (12.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (13.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (4.7ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (17.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (4.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (3.7ms)[0m   [0;1mSHOW TABLES[0m

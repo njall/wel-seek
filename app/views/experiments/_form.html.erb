@@ -26,6 +26,13 @@
     <%= f.label :description -%><br/>
     <%= f.text_area :description,:style => "width: 100%;", :rows => 10 -%>
   </p>
+
+  <p>
+    <%= f.label :technical_report -%><br/>
+    <%= f.text_area :technical_report,:style => "width: 100%;", :rows => 2 -%>
+  </p>
+
+
   <% if Seek::Config.is_virtualliver -%>
       <p>
         <%= f.label "Institution" %><br/>
