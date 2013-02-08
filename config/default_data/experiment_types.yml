@@ -1,13 +1,2 @@
-experiment types:
- title: experimental experiment types
- children: questionnaire
-
-questionnaire:
- title: questionnaire
- children: yes_or_no_answers, text_boxes
-
-yes_or_no_answers:
- title: yes or no answers
-
-text_boxes:
- title: text box answers
+experiment_types:
+  title: experiment type

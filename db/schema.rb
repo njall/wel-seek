@@ -402,6 +402,7 @@ ActiveRecord::Schema.define(:version => 20120829083541) do
   create_table "experiments", :force => true do |t|
     t.string   "title"
     t.text     "description"
+    t.string   "technical_report"
     t.integer  "experiment_type_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -413,7 +414,6 @@ ActiveRecord::Schema.define(:version => 20120829083541) do
     t.string   "uuid"
     t.integer  "policy_id"
     t.integer  "institution_id"
-    t.string   "technical_report"
   end
 
   create_table "experiments_samples", :id => false, :force => true do |t|

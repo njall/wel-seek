@@ -73,7 +73,7 @@ class Experiment < ActiveRecord::Base
     :dependent => :destroy
           
   searchable(:auto_index=>false) do
-    text :description, :title, :searchable_tags, :organism_terms
+    text :description, :title, :technical_report, :searchable_tags, :organism_terms
     text :experiment_type do
         experiment_type.try :title
     end

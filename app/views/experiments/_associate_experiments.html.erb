@@ -1,0 +1,163 @@
+<%
+   resource_text ||= text_for_resource(resource)
+   all_experiments=authorised_experiments.sort_by &:title
+   all_experiments = authorised_experiments.select do |experiment|
+     experiment.is_modelling?
+   end if resource.is_a? Model
+
+   project_experiments=authorised_experiments(current_user.person.projects).sort_by &:title
+   project_experiments=project_experiments.select{|a| a.is_modelling?} if resource.is_a?(Model)
+   select_truncate_length=120
+   associated_experiments = resource.is_a?(Publication) ? resource.related_experiments : resource.experiments
+%>
+
+<div class="fold">
+
+  <div class="foldTitle">
+    <%= help_icon("Here you can associate Experiments in SEEK to this #{resource_text}. You can only associate Experiments you are authorized to edit.") -%>
+    Experiments
+  </div>
+
+  <div id="associate_experiment_fold_content" class="foldContent" style="display:<%= associated_experiments.blank? ? 'none' : 'block' -%>">
+    <div class="yui-u first" style="width:66%; float:left">
+
+      <p style="color: #666666;">
+        The following Experiments are involved in this <%= resource_text -%>:
+      </p>
+      <div id="experiment_to_list" class="box_editing_inner" style="line-height: 1.5">
+        <span class="none_text" id="experiment_files">Loading...</span>
+      </div>
+      <div class="association_step">
+        <p style="color: #666666;">
+          You may select an existing Experiment or <%= link_to h("create a new Experiment here"), new_experiment_path(:create_from_asset=>:true),:popup => true%>  for the <%= resource_text -%>.
+        </p>
+        <% if show_relationships -%>
+            <%= select_tag :possible_experiments,
+                           options_for_select([["Select Experiment ...",0]]|project_experiments.collect{|s| [truncate(h(s.title),:length=>select_truncate_length),s.id]}),
+                           {:style=>"width:90%",:onchange=>remote_function(
+                                   :url=>{:action=>"preview",:controller=>"experiments",:element=>"experiment_preview"},
+                                   :with=>"'id='+this.value",
+                                   :before=>"show_ajax_loader('experiment_preview')"
+                           )+";check_show_add_experiment();selected_experiment();return(false);"
+                           } -%>
+            <%= select_tag :experiment_ids,'',{:multiple=>true,:style=>"display:none;"} -%>
+            <br/>
+            <div id="relationship" style="display:none;">
+              <%= label_tag "Relationship between the data and the model" %><br/>
+              <%= select_tag :experiment_relationship_type, options_for_select([["None",0]] + RelationshipType.all.collect{|r| [r.title,r.id]}) %>
+            </div>
+            <br/>
+        <% else %>
+            <%= select_tag :possible_experiments,
+                           options_for_select([["Select Experiment ...",0]]|project_experiments.collect{|s| [truncate(h(s.title),:length=>select_truncate_length),s.id]}),
+                           {:style=>"width:90%",:onchange=>remote_function(
+                                   :url=>{:action=>"preview",:controller=>"experiments",:element=>"experiment_preview"},
+                                   :with=>"'id='+this.value",
+                                   :before=>"show_ajax_loader('experiment_preview')"
+                           )+";check_show_add_experiment();return(false);"
+                           } -%>
+            <%= select_tag :experiment_ids,'',{:multiple=>true,:style=>"display:none;"} -%>
+            <br/>
+            <br/>
+        <% end %>
+      </div>
+
+      <br/>
+      <%= link_to_function (image("new") + " Associate with this #{resource_text}"), "addSelectedExperiment(); return(false);", :id=>"add_experiment_link", :class=>"block_link" %>
+
+      <%= check_box_tag :include_other_project_experiments, nil, false, {:onchange=>"toggle_experiment_list();",:style=>"margin-top:0.5em;"} -%> Associate Experiments from other projects?
+    </div>
+
+    <%= render :partial => 'assets/preview_box', :locals => {:preview_name => 'experiment'}%>
+
+  </div>
+</div>
+
+
+<script type="text/javascript">
+    function selected_experiment(){
+        i = $('possible_experiments').selectedIndex;
+        id = $('possible_experiments').options[i].value;
+        for (var j = 0; j < id_rel_array.length; j++) {
+            if ((id == id_rel_array[j][0]) && (id_rel_array[j][1] == 'true'))  {
+                Effect.Appear('relationship',{duration:0.2});
+            }
+            else if ((id == id_rel_array[j][0]) && (id_rel_array[j][1] == 'false'))  {
+                $('experiment_relationship_type').selectedIndex = 0;
+                Effect.Fade('relationship',{duration:0.2});
+            }
+        }
+    }
+
+    function toggle_experiment_list() {
+        var checked = $('include_other_project_experiments').checked;
+        var selection_box = $('possible_experiments');
+        var option;
+
+        selection_box.options.length = 0;
+
+        if (checked) {
+        <% ([["Select Experiment ...",0]]|all_experiments.collect{|s| [truncate(h(s.title),:length=>select_truncate_length),s.id]}).each do |df_details| -%>
+            option = document.createElement("OPTION");
+            option.text = '<%= escape_javascript(df_details[0]) -%>';
+            option.value = '<%= df_details[1] -%>';
+            try {
+                selection_box.add(option); //for older IE version
+            }
+            catch (ex) {
+                selection_box.add(option, null);
+            }
+        <% end -%>
+        }
+        else {
+        <% ([["Select Experiment ...",0]]|project_experiments.collect{|s| [truncate(h(s.title),:length=>select_truncate_length),s.id]}).each do |df_details| -%>
+            option = document.createElement("OPTION");
+            option.text = '<%= escape_javascript(df_details[0]) -%>';
+            option.value = '<%= df_details[1] -%>';
+            try {
+                selection_box.add(option); //for older IE version
+            }
+            catch (ex) {
+                selection_box.add(option, null);
+            }
+        <% end -%>
+        }
+        selection_box.selectedIndex = 0;
+        selection_box.onchange();
+    }
+
+    <% associated_experiment_ids = resource.is_a?(Publication) ? resource.related_experiments.collect(&:id) : resource.experiments.collect(&:id) %>
+    <% associated_experiment_ids.each do |associated_experiment_id|%>
+    <% experiment = Experiment.find(associated_experiment_id) %>
+    <% if experiment.try :can_view? -%>
+    experiment_id = '<%= experiment.id -%>';
+    experiment_title = '<%= experiment.title -%>';
+    relationship_type = '<%= resource.is_a?(DataFile) ? escape_javascript(resource.relationship_type(experiment).try(:title) || "None") : 'None'-%>';
+    addExperiment(experiment_title,experiment_id,relationship_type);
+    <% end %>
+    <% end -%>
+
+    <% all_experiments.each do |experiment|%>
+    experiment_id = '<%= experiment.id -%>';
+    experiment_relationship = '<%=(experiment.is_modelling?) -%>';
+    id_rel_array.push([experiment_id, experiment_relationship])
+    <% end -%>
+
+    <% if params[:experiment_ids] %>
+    <% params[:experiment_ids].each do |id| -%>
+    <% experiment = Experiment.find(id) %>
+    <% if experiment.can_view?-%>
+    experiment_id = '<%= experiment.id -%>';
+    experiment_title = '<%= escape_javascript(experiment.title) -%>';
+    relationship_type = '<%= resource.is_a?(DataFile) ? escape_javascript(resource.relationship_type(experiment).try(:title) || "None") : 'None' -%>';
+    addExperiment(experiment_title,experiment_id,relationship_type);
+    <% end -%>
+    <% end -%>
+    <% end -%>
+
+
+
+    updateExperiments();
+
+    check_show_add_experiment();
+</script>

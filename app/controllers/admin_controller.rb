@@ -34,7 +34,7 @@ class AdminController < ApplicationController
   end
   
   def tags
-    @tags=TextValue.all_tags.sort_by{|t| t.text}
+     @tags=TextValue.all_tags.sort_by{|t| t.text}
   end
 
   def update_features_enabled

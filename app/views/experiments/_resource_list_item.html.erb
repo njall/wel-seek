@@ -25,7 +25,7 @@
 
   <%= render :partial => 'projects/show_project_relationship', :locals => {:resource => resource, :list_item => true}%>
 
-  <%= list_experiment_samples_and_organisms "Samples",resource.samples,resource.experiment_organisms %>
+  <%= list_experiment_samples_and_organisms "Samples",resource.samples,resource.experiment_organisms if Seek::Config.organisms_enabled %>
 
   <%= list_item_authorized_list resource.protocol_masters, "Protocols", true, 50, true %>
 
@@ -34,7 +34,7 @@
 </div>
 
 <div class="list_item_whole_width">
-  <%= list_item_tag_list resource %>
+  <%#= list_item_tag_list resource %>
   <%= list_item_description resource.description %>
   <%= list_item_timestamp resource %>
 </div>

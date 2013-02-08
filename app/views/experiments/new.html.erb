@@ -6,7 +6,7 @@
 -%>
 
 <% if Seek::Config.systems_biology_mode==false
-      @experiment.experiment_class=ExperimentClass.for_type("experimental")
+      @experiment.experiment_class=ExperimentClass.for_type("experimental")     #experiment_class="EXP" is_modelling?==false
   end
 %>
 

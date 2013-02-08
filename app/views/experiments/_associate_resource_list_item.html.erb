@@ -25,8 +25,9 @@
 
   <%= render :partial => 'projects/show_project_relationship', :locals => {:resource => resource, :list_item => true} %>
 
-  <%= list_item_simple_list(resource.experiment_organisms, "Organism") { |ao| experiment_organism_list_item(ao) } %>
-
+<% if Seek::Config.organisms_enabled %>
+  <%= list_item_simple_list(resource.experiment_organisms, "Organism") { |ao| experiment_organism_list_item(ao)  } %>
+<% end %>
   <%= list_item_authorized_list resource.protocols, "Protocols", true, 50, true %>
 
   <%= list_item_authorized_list resource.data_files, "Data files", true, 50, true %>

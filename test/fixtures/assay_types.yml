@@ -46,8 +46,6 @@ child_experiment_type:
 new_parent:
   title: new_parent
 
-experimental_experiment_type:
-  title: "experimental experiment type"
+experiment_type:
+  title: "experiment type"
 
-modelling_experiment_type:
-  title: "modelling analysis type"

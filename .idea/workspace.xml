@@ -2,17 +2,105 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c404c65-3421-491c-8b5e-34ee466318f1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/default_data/experiment_classes.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/default_data/institutions.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/default_data/work_groups.yml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/experiments/_associate_sop.html.erb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_k.fdt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_k.fdx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_k.fnm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_k.frq" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_k.nrm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_k.prx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_k.tii" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_k.tis" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_k_1.del" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_l.fdt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_l.fdx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_l.fnm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_l.frq" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_l.nrm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_l.prx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_l.tii" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_l.tis" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_m.fdt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_m.fdx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_m.fnm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_m.frq" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_m.nrm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_m.prx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_m.tii" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_m.tis" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_n.fdt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_n.fdx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_n.fnm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_n.frq" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_n.nrm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_n.prx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_n.tii" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_n.tis" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_o.fdt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_o.fdx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_o.fnm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_o.frq" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_o.nrm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_o.prx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_o.tii" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_o.tis" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_p.fdt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_p.fdx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_p.fnm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_p.frq" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_p.nrm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_p.prx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_p.tii" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_p.tis" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_q.fdt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_q.fdx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_q.fnm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_q.frq" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_q.nrm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_q.prx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_q.tii" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_q.tis" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_r.fdt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_r.fdx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_r.fnm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_r.frq" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_r.nrm" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_r.prx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_r.tii" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/_r.tis" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/solr/data/production/index/segments_r" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/assay_types/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/experiment_types/_form.html.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/assay_types/api/_assay_type.xml.builder" afterPath="$PROJECT_DIR$/app/views/experiment_types/api/_assay_type.xml.builder" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/assay_types/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/experiment_types/edit.html.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/assay_types/index.xml.builder" afterPath="$PROJECT_DIR$/app/views/experiment_types/index.xml.builder" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/assay_types/manage.html.erb" afterPath="$PROJECT_DIR$/app/views/experiment_types/manage.html.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/assay_types/new.html.erb" afterPath="$PROJECT_DIR$/app/views/experiment_types/new.html.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/assay_types/show.html.erb" afterPath="$PROJECT_DIR$/app/views/experiment_types/show.html.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/assay_types/show.xml.builder" afterPath="$PROJECT_DIR$/app/views/experiment_types/show.xml.builder" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/experiments/update_assays_list.html.erb" afterPath="$PROJECT_DIR$/app/views/experiments/update_experiments_list.html.erb" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/javascripts/assays.js" afterPath="$PROJECT_DIR$/public/javascripts/experiments.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solr/data/production/index/segments.gen" afterPath="$PROJECT_DIR$/solr/data/production/index/segments.gen" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/views/suggestions_for_tag.cache" afterPath="$PROJECT_DIR$/tmp/cache/views/suggestions_for_tag.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/experiments/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/experiments/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/experiments/show.html.erb" afterPath="$PROJECT_DIR$/app/views/experiments/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/experiment.rb" afterPath="$PROJECT_DIR$/app/models/experiment.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/experiment_type.rb" afterPath="$PROJECT_DIR$/app/models/experiment_type.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/experiments/_associate_resource_list_item.html.erb" afterPath="$PROJECT_DIR$/app/views/experiments/_associate_resource_list_item.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/experiments/_resource_list_item.html.erb" afterPath="$PROJECT_DIR$/app/views/experiments/_resource_list_item.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/experiments/new.html.erb" afterPath="$PROJECT_DIR$/app/views/experiments/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/default_data/experiment_types.yml" afterPath="$PROJECT_DIR$/config/default_data/experiment_types.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/default_data/projects.yml" afterPath="$PROJECT_DIR$/config/default_data/projects.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/default_data/technology_types.yml" afterPath="$PROJECT_DIR$/config/default_data/technology_types.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20120827195014_rename_assay_to_experiment.rb" afterPath="$PROJECT_DIR$/db/migrate/20120827195014_rename_assay_to_experiment.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/seek_seed.rake" afterPath="$PROJECT_DIR$/lib/tasks/seek_seed.rake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/delayed_job.log" afterPath="$PROJECT_DIR$/log/delayed_job.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/production.log" afterPath="$PROJECT_DIR$/log/production.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/sunspot-solr-production.log" afterPath="$PROJECT_DIR$/log/sunspot-solr-production.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/assay_types.yml" afterPath="$PROJECT_DIR$/test/fixtures/assay_types.yml" />
     </list>
     <ignored path="work-seek.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,65 +119,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="experiment_types.yml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_associate_experiments.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/experiments/_associate_experiments.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="129" column="15" selection-start="6351" selection-end="6352" vertical-scroll-proportion="-4.122449">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_preview_box.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/assets/_preview_box.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="48" selection-start="213" selection-end="213" vertical-scroll-proportion="-2.5">
+              <folding>
+                <marker date="1347012682000" expanded="true" signature="90:182" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_resource_list_item.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/experiments/_resource_list_item.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="51" selection-start="1450" selection-end="1450" vertical-scroll-proportion="-10.408163">
+              <folding>
+                <marker date="1347011249000" expanded="true" signature="145:894" placeholder="..." />
+                <marker date="1347011249000" expanded="true" signature="932:1448" placeholder="..." />
+                <marker date="1347011249000" expanded="true" signature="1485:1619" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/experiments/show.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="79" column="26" selection-start="3221" selection-end="3221" vertical-scroll-proportion="-8.583333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="experiments.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/experiments.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="460" column="37" selection-start="13586" selection-end="13586" vertical-scroll-proportion="-13.8">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_associate_assays.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/experiments/_associate_assays.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="90" selection-start="739" selection-end="739" vertical-scroll-proportion="-11.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/experiments/_form.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="90" column="28" selection-start="3684" selection-end="3684" vertical-scroll-proportion="0.7076649">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="experiment_type.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/experiment_type.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="37" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="experiment_types.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/default_data/experiment_types.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="31" selection-start="243" selection-end="243" vertical-scroll-proportion="0.33271718">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="projects.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/default_data/projects.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="38" selection-start="19975" selection-end="19975" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="disciplines.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/default_data/disciplines.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project_roles.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/default_data/project_roles.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="boot.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/boot.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="34" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environment.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="9" selection-start="1801" selection-end="1801" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="seek_seed.rake" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/tasks/seek_seed.rake">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="0" selection-start="4173" selection-end="4261" vertical-scroll-proportion="-69.6">
-              <folding />
+            <state line="1" column="24" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1347018912000" expanded="true" signature="0:42" placeholder="experiment_types:" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,22 +221,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/db/migrate/20120827195138_rename_sop_to_protocol.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20120827195014_rename_assay_to_experiment.rb" />
-        <option value="$PROJECT_DIR$/app/models/experiment.rb" />
-        <option value="$PROJECT_DIR$/app/views/admin/_tasks.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/projects/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/projects/_resource_list_item.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/projects/show.html.erb" />
-        <option value="$PROJECT_DIR$/config/initializers/seek_configuration.rb" />
-        <option value="$PROJECT_DIR$/app/views/experiments/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/experiments/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/experiments/show.html.erb" />
-        <option value="$PROJECT_DIR$/config/default_data/technology_types.yml" />
-        <option value="$PROJECT_DIR$/config/default_data/experiment_classes.yml" />
-        <option value="$PROJECT_DIR$/config/default_data/experiment_types.yml" />
+        <option value="$PROJECT_DIR$/config/default_data/institutions.yml" />
+        <option value="$PROJECT_DIR$/config/default_data/work_groups.yml" />
         <option value="$PROJECT_DIR$/lib/tasks/seek_seed.rake" />
-        <option value="$PROJECT_DIR$/config/default_data/projects.yml" />
+        <option value="$PROJECT_DIR$/app/models/project.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/experiments_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/experiments/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/experiments/new.html.erb" />
+        <option value="$PROJECT_DIR$/config/default_data/technology_types.yml" />
+        <option value="$PROJECT_DIR$/app/views/experiments/_associate_experiment.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/experiments/_associate_experiments.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/experiments/_resource_list_item.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/experiments/_associate_resource_list_item.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/assets/_preview_box.erb" />
+        <option value="$PROJECT_DIR$/app/models/experiment_type.rb" />
+        <option value="$PROJECT_DIR$/test/fixtures/assay_types.yml" />
+        <option value="$PROJECT_DIR$/config/default_data/experiment_types.yml" />
       </list>
     </option>
   </component>
@@ -134,10 +248,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
     <option name="y" value="25" />
-    <option name="width" value="1282" />
-    <option name="height" value="1000" />
+    <option name="width" value="1280" />
+    <option name="height" value="999" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -165,8 +278,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -195,7 +306,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -209,26 +324,110 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="work-seek" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seek" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="environments" />
+              <option name="myItemId" value="script" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="work-seek" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seek" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="work-seek" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seek" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="experiments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="work-seek" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seek" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="work-seek" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seek" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="recentsLimit" value="5" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.lastSelected" value="editor.preferences.tabs" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Rails.Production: work-seek">
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
@@ -525,15 +724,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="25" width="1282" height="1000" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="25" width="1280" height="999" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3295325" sideWeight="0.53808755" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2599772" sideWeight="0.53808755" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37115073" sideWeight="0.6704675" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2350081" sideWeight="0.7400228" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990878" sideWeight="0.49675852" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32839224" sideWeight="0.51701784" order="7" side_tool="true" content_ui="tabs" />
@@ -601,114 +800,126 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/default_data/experiment_classes.yml">
+    <entry file="file://$PROJECT_DIR$/app/views/experiments/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="28" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0">
+        <state line="29" column="45" selection-start="1159" selection-end="1159" vertical-scroll-proportion="-18.125">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/experiment_type.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/experiment_types/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="12" selection-start="779" selection-end="809" vertical-scroll-proportion="0.0">
+        <state line="11" column="53" selection-start="370" selection-end="370" vertical-scroll-proportion="-6.875">
+          <folding>
+            <marker date="1346141582000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1346141582000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1346141582000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/default_data/technology_types.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/preinitializer.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/experiments/_associate_protocol.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="25" column="0" selection-start="1037" selection-end="1037" vertical-scroll-proportion="-15.625">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/experiments/api/_assay.xml.builder">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.84799">
+        <state line="16" column="32" selection-start="665" selection-end="665" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/experiments/_associate_resource_list_item.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="34" column="41" selection-start="1307" selection-end="1307" vertical-scroll-proportion="-21.25">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/experiments/_associate_experiments.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="129" column="15" selection-start="6351" selection-end="6352" vertical-scroll-proportion="-4.122449">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/seek_configuration.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/assets/_preview_box.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.25581396">
+        <state line="4" column="48" selection-start="213" selection-end="213" vertical-scroll-proportion="-2.5">
+          <folding>
+            <marker date="1347012682000" expanded="true" signature="90:182" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/experiments/_resource_list_item.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="51" selection-start="1450" selection-end="1450" vertical-scroll-proportion="-10.408163">
+          <folding>
+            <marker date="1347011249000" expanded="true" signature="145:894" placeholder="..." />
+            <marker date="1347011249000" expanded="true" signature="932:1448" placeholder="..." />
+            <marker date="1347011249000" expanded="true" signature="1485:1619" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/experiments/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="26" selection-start="3221" selection-end="3221" vertical-scroll-proportion="-8.583333">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/boot.rb">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/experiments.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="34" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
+        <state line="460" column="37" selection-start="13586" selection-end="13586" vertical-scroll-proportion="-13.8">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/experiments/_associate_assays.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="9" selection-start="1801" selection-end="1801" vertical-scroll-proportion="0.0">
+        <state line="19" column="90" selection-start="739" selection-end="739" vertical-scroll-proportion="-11.875">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/default_data/project_roles.yml">
+    <entry file="file://$PROJECT_DIR$/test/fixtures/assay_types.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/default_data/disciplines.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/default_data/organisms.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/default_data/compounds.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="1" selection-end="285" vertical-scroll-proportion="-0.69316083">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/seek_seed.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="0" selection-start="4173" selection-end="4261" vertical-scroll-proportion="-69.6">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/default_data/projects.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="38" selection-start="19975" selection-end="19975" vertical-scroll-proportion="0.0">
+        <state line="50" column="0" selection-start="951" selection-end="951" vertical-scroll-proportion="0.83146065">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/default_data/experiment_types.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="31" selection-start="243" selection-end="243" vertical-scroll-proportion="0.33271718">
+        <state line="1" column="24" selection-start="42" selection-end="42" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1347018912000" expanded="true" signature="0:42" placeholder="experiment_types:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/experiment_type.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="37" selection-start="1045" selection-end="1045" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/experiments/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="28" selection-start="3684" selection-end="3684" vertical-scroll-proportion="0.7076649">
           <folding />
         </state>
       </provider>

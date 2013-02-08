@@ -16,12 +16,16 @@
   
   <h3>Manage</h3>
   <ul>
-<% if Seek::Config.systems_biology_mode %>
     <li><%= link_to "Manage experiment types", url_for(:action=>"manage", :controller=>"experiment_types") %></li>
     <li><%= link_to "Manage technology types", url_for(:action=>"manage", :controller=>"technology_types") %></li>
+
+  <% if Seek::Config.systems_biology_mode %>
     <li><%= link_to "Manage compounds", url_for(:action=>"index", :controller=>"compounds") %></li>
 <% end %>
-    <li><%= link_to "Manage tags", url_for(:action=>"tags", :controller=>"admin") %></li>
+    <!--
+     Disabled as causing errors.
+    <li><%#= link_to "Manage tags", url_for(:action=>"tags", :controller=>"admin") %></li>
+    !-->
   </ul>
   <% if Seek::Config.jerm_enabled -%>
       <h3>JERM</h3>

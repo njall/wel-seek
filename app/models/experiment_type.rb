@@ -27,12 +27,12 @@ class ExperimentType < ActiveRecord::Base
 
   #FIXME: really not happy looking up by title, but will be replaced by BioPortal eventually
   def self.experimental_experiment_type_id
-    at=ExperimentType.find_by_title("experimental experiment type").id
+    at=ExperimentType.find_by_title("experiment type").id
   end
 
   #FIXME: really not happy looking up by title, but will be replaced by BioPortal eventually
   def self.modelling_experiment_type_id
-    at=ExperimentType.find_by_title("modelling analysis type").id
+    at=ExperimentType.find_by_title("experiment type").id
   end
  
   private

@@ -1,0 +1,59 @@
+COSE:
+  institution_id: 1
+  project_id: 1
+
+COPE:
+  institution_id: 1
+  project_id: 2
+
+DANTE:
+  institution_id: 1
+  project_id: 3
+
+EIVAA:
+  institution_id: 1
+  project_id: 4
+
+HuCEL:
+  institution_id: 1
+  project_id: 5
+
+MSO:
+  institution_id: 1
+  project_id: 6
+
+OSS:
+  institution_id: 1
+  project_id: 7
+
+RIAM:
+  institution_id: 1
+  project_id: 8
+
+SADIe:
+  institution_id: 1
+  project_id: 9
+
+SASWAT:
+  institution_id: 1
+  project_id: 10
+
+SCWeb2:
+  institution_id: 1
+  project_id: 11
+
+TEOA:
+  institution_id: 1
+  project_id: 12
+
+VISAS:
+  institution_id: 1
+  project_id: 13
+
+ViCRAM:
+  institution_id: 1
+  project_id: 14
+
+WIMWAT:
+  institution_id: 1
+  project_id: 15
